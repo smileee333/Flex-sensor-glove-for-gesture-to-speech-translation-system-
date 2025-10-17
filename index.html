@@ -118,7 +118,7 @@ Requirement Specification</h1>
 <li>outputs: a speech signal for each gesture corresponding to word/phrase. Apart from primary inputs and outputs, there should be a provision of display panel for input/output observability. Apart from letting the translator translate each word/phrase specific captured gestures, there should also be a provision to review all the words/phrases captured by translator along with the provision to delete them before letting the translator, translate them to speech signal. There will be a set of words/phrases along with the corresponding gestures, pre-defined in the translator, but translator's firmware architecture should be scalable to scale to more set of words/phrase support along with hand-movement sensors support. Each recognized sampled gestures from flex sensors should have hamming distance greater then certain threshold, so that these gestures becomes easily distinguishable from one another.<br  />
  <br  />
  Following diagram gives the visual representation or final solution: <div class="image">
-<img src="https://github.com/smileee333/Flex-sensor-glove-for-gesture-to-speech-translation-system-/tree/main/images/hand.png" alt="" width="1000px"/>
+<img src="/images/hand.png" alt="gesture translator" width="1000px"/>
 <div class="caption">
 Fig. Conceptualization of Gesture to speech translator</div></div>
 </li>
@@ -129,14 +129,14 @@ Key Challanges</h1>
 Gesture Distinguishability</h2>
 <p>Due to a minimum hamming distance requirement, all the possible gestures from flex sensors output can't be directly mapped to words/phrases defined in sign language. Gestures defined in sign language are not subjected to the condition of minimum hamming distance. Thus we can't have a common list of all the gestures put together to be analyzed, otherwise their may be chances of gesture overlapping resulting in miscommunication.<br  />
 <b>Solution</b> All the sign language gestures are required to be segregated into different groups such that within each group, only those sign language gestures are kept together, which are having bare minimum required hamming distance.Further gestures are required to be analyzed within each group separately such that only one gesture group is considered to be active at a time. Thus following Finite state machine can be considered for gesture transitioning such that each state of FSM represents a gesture: </p><div class="image">
-<img src="https://github.com/smileee333/Flex-sensor-glove-for-gesture-to-speech-translation-system-/tree/main/images/Gesture_FSM.png" alt="" width="1000px"/>
+<img src="/images/Gesture_FSM.png" alt="Gesture finite state machine" width="1000px"/>
 <div class="caption">
 Fig. Gesture Finite State Machine</div></div>
 <h2 class="doxsection"><a class="anchor" id="Challenge_2"></a>
 Wearability, low-power, cost effective and memory constrain</h2>
 <p>Provided solution should be cost effective, low power, wearable as well as implementable in a large variety of gesture to speech translation requirement. It indirectly puts the constraints of translator being memory constrained device along with the requirement of support for large number of words/phrases specific gestures. Hamming distance puts a critical upper bound over number of supportable gestures at a time. Also few extra control gestures and generic gestures are also required to be defined on the top of supported sign language gestures, for translator management purposes.<br  />
 <b>Solution</b> With such a memory constrained device, in addition to solution of only one gesture group being active at a time, gestures should also be multiplexed such that within a cetain active gesture group, it should mean different and in another time instance when another group is active, it should mean different. Follwing diagram illustrates the gesture bank architecture described here: </p><div class="image">
-<img src="https://github.com/smileee333/Flex-sensor-glove-for-gesture-to-speech-translation-system-/tree/main/images/Gesture_bank.png" alt="" width="1000px"/>
+<img src="/images/Gesture_bank.png" alt="Gesture bank" width="1000px"/>
 <div class="caption">
 Fig. Gesture Bank Concept</div></div>
 <p><br  />
@@ -144,13 +144,13 @@ Fig. Gesture Bank Concept</div></div>
 <h2 class="doxsection"><a class="anchor" id="Challenge_3"></a>
 Scalability and design re-use</h2>
 <p>To scalability requirement and design re-use, the existing architecture to extend the support for more sign language or translator management gestures, a template based architecture should be used in conjunction with object oriented. Following diagram highlights the solution space objects along with the inter-object communication between them: </p><div class="image">
-<img src="https://github.com/smileee333/Flex-sensor-glove-for-gesture-to-speech-translation-system-/tree/main/images/Firmware_architecture.png" alt="" width="1000px"/>
+<img src="/images/Firmware_architecture.png" alt="Firmware architecture" width="1000px"/>
 <div class="caption">
 Fig. Solution space objects and interconnection between them.</div></div>
 <h1 class="doxsection"><a class="anchor" id="Prototyping"></a>
 Design prototyping</h1>
 <div class="image">
-<img src="https://github.com/smileee333/Flex-sensor-glove-for-gesture-to-speech-translation-system-/tree/main/images/flex_schematic.png" alt="" width="1000px"/>
+<img src="/images/flex_schematic.png" alt="prototype schematic" width="1000px"/>
 <div class="caption">
 Fig. Prototype design schmatic</div></div>
  </div></div><!-- PageDoc -->
