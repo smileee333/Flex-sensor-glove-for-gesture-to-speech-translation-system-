@@ -1,0 +1,7 @@
+<map id="C:/Users/Admin/Downloads/gesture_translator/Code_Doc/include/globals.h" name="C:/Users/Admin/Downloads/gesture_translator/Code_Doc/include/globals.h">
+<area shape="rect" id="Node000001" title="This is the main header file and shall include all other header files as well as declaration of all t..." alt="" coords="109,5,294,61"/>
+<area shape="rect" id="Node000002" href="$globals_8cpp.html" title="This file shall include all other global objects initialization." alt="" coords="5,109,190,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,74,127,110,124,106,161,70"/>
+<area shape="rect" id="Node000003" href="$sentences_8cpp.html" title="This file includes the member function definitions of sentence_queue class defined in sentences...." alt="" coords="213,109,398,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,70,279,106,276,110,238,74"/>
+</map>

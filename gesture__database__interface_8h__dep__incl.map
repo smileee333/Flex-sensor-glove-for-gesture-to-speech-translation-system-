@@ -1,0 +1,9 @@
+<map id="C:/Users/Admin/Downloads/gesture_translator/Code_Doc/include/gesture_database_interface.h" name="C:/Users/Admin/Downloads/gesture_translator/Code_Doc/include/gesture_database_interface.h">
+<area shape="rect" id="Node000001" title="All the declarations for data structures representing interface to gesture database defined in gestur..." alt="" coords="99,5,304,76"/>
+<area shape="rect" id="Node000002" href="$globals_8h.html" title="This is the main header file and shall include all other header files as well as declaration of all t..." alt="" coords="109,124,294,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,92,204,124,199,124,199,92"/>
+<area shape="rect" id="Node000003" href="$globals_8cpp.html" title="This file shall include all other global objects initialization." alt="" coords="5,228,190,283"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="165,193,127,229,124,225,161,189"/>
+<area shape="rect" id="Node000004" href="$sentences_8cpp.html" title="This file includes the member function definitions of sentence_queue class defined in sentences...." alt="" coords="213,228,398,283"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="242,189,279,225,276,229,238,193"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="C:/Users/Admin/Downloads/gesture_translator/Code_Doc/include/gesture_spaces.h" name="C:/Users/Admin/Downloads/gesture_translator/Code_Doc/include/gesture_spaces.h">
+<area shape="rect" id="Node000001" title="All the declarations for data structures representing gesture space." alt="" coords="99,5,304,61"/>
+<area shape="rect" id="Node000002" href="$globals_8h.html" title="This is the main header file and shall include all other header files as well as declaration of all t..." alt="" coords="109,109,294,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,77,204,108,199,108,199,77"/>
+<area shape="rect" id="Node000003" href="$globals_8cpp.html" title="This file shall include all other global objects initialization." alt="" coords="5,213,190,268"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="165,178,127,214,124,210,161,174"/>
+<area shape="rect" id="Node000004" href="$sentences_8cpp.html" title="This file includes the member function definitions of sentence_queue class defined in sentences...." alt="" coords="213,213,398,268"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="242,174,279,210,276,214,238,178"/>
+</map>

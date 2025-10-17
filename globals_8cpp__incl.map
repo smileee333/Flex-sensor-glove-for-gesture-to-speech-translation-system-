@@ -1,0 +1,38 @@
+<map id="C:/Users/Admin/Downloads/gesture_translator/Code_Doc/src/globals.cpp" name="C:/Users/Admin/Downloads/gesture_translator/Code_Doc/src/globals.cpp">
+<area shape="rect" id="Node000001" title="This file shall include all other global objects initialization." alt="" coords="966,5,1150,61"/>
+<area shape="rect" id="Node000002" href="$globals_8h.html" title="This is the main header file and shall include all other header files as well as declaration of all t..." alt="" coords="1022,109,1095,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1061,61,1061,93,1056,93,1056,61"/>
+<area shape="rect" id="Node000003" href="$_c_o_n_f_i_g_8h.html" title=" " alt="" coords="336,183,420,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1021,128,779,146,611,162,436,185,435,180,611,157,779,140,1021,123"/>
+<area shape="rect" id="Node000010" href="$_display_8h.html" title="All the declarations for data structures representing a lcd display and methods associated with it ar..." alt="" coords="444,183,520,208"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="1021,129,818,147,680,164,535,185,535,180,679,158,817,142,1021,123"/>
+<area shape="rect" id="Node000011" href="$gesture__database__interface_8h.html" title="All the declarations for data structures representing interface to gesture database defined in gestur..." alt="" coords="543,183,736,208"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="1021,132,726,182,725,177,1021,127"/>
+<area shape="rect" id="Node000012" href="$gesture__database_8h.html" title="All the declarations for data structures representing gesture database." alt="" coords="760,183,895,208"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="1022,137,882,180,880,175,1020,132"/>
+<area shape="rect" id="Node000013" href="$gesture__spaces_8h.html" title="All the declarations for data structures representing gesture space." alt="" coords="919,183,1043,208"/>
+<area shape="poly" id="edge13_Node000002_Node000013" title=" " alt="" coords="1047,137,1007,174,1003,170,1043,133"/>
+<area shape="rect" id="Node000014" href="$_gesture_translator_8h.html" title="All the declarations for data structures representing a gesture translator and methods associated wit..." alt="" coords="1067,183,1204,208"/>
+<area shape="poly" id="edge14_Node000002_Node000014" title=" " alt="" coords="1073,133,1113,170,1110,174,1069,137"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1227,183,1364,208"/>
+<area shape="poly" id="edge15_Node000002_Node000015" title=" " alt="" coords="1096,132,1241,175,1240,180,1094,137"/>
+<area shape="rect" id="Node000016" href="$sample_8h.html" title="All the declarations for data structures representing a sample and methods associated with it are def..." alt="" coords="1388,183,1462,208"/>
+<area shape="poly" id="edge16_Node000002_Node000016" title=" " alt="" coords="1096,127,1373,180,1372,185,1095,132"/>
+<area shape="rect" id="Node000017" href="$_sampler_8h.html" title="All the declarations for data structures representing Timer are defined in this file." alt="" coords="1486,183,1566,208"/>
+<area shape="poly" id="edge17_Node000002_Node000017" title=" " alt="" coords="1095,125,1255,146,1471,179,1470,185,1254,151,1095,130"/>
+<area shape="rect" id="Node000018" href="$sentences_8h.html" title="All the declarations for data structures representing a sentence and methods associated with it are d..." alt="" coords="1591,183,1683,208"/>
+<area shape="poly" id="edge18_Node000002_Node000018" title=" " alt="" coords="1095,124,1296,144,1576,180,1575,185,1295,149,1095,129"/>
+<area shape="rect" id="Node000004" href="$_d_f_robot_d_f_player_mini_8h.html" title="DFPlayer &#45; An Arduino Mini MP3 Player From DFRobot &#160;&#160;Header file for DFRobot&#39;s DFPlayer." alt="" coords="5,256,170,282"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="337,210,153,255,151,250,335,205"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="109,330,186,356"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="338,211,287,231,234,259,198,288,168,320,165,316,194,285,231,254,284,226,336,206"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="245,256,362,282"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="367,211,329,248,325,244,364,207"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="386,256,522,282"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="393,207,432,244,429,248,389,211"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="546,256,632,282"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="415,206,539,248,538,253,413,211"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="656,256,770,282"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="421,203,642,250,641,255,420,209"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="99,281,130,316,126,320,95,284"/>
+</map>
