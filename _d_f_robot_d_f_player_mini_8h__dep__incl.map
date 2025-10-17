@@ -1,0 +1,13 @@
+<map id="C:/Users/Admin/Downloads/gesture_translator/Code_Doc/libraries/DF_mini_player/DFRobotDFPlayerMini.h" name="C:/Users/Admin/Downloads/gesture_translator/Code_Doc/libraries/DF_mini_player/DFRobotDFPlayerMini.h">
+<area shape="rect" id="Node000001" title="DFPlayer &#45; An Arduino Mini MP3 Player From DFRobot &#160;&#160;Header file for DFRobot&#39;s DFPlayer." alt="" coords="210,5,406,76"/>
+<area shape="rect" id="Node000002" href="$_c_o_n_f_i_g_8h.html" title=" " alt="" coords="109,132,294,187"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="269,89,228,133,224,129,265,85"/>
+<area shape="rect" id="Node000006" href="$_d_f_robot_d_f_player_mini_8cpp.html" title="DFPlayer &#45; An Arduino Mini MP3 Player From DFRobot &#160;&#160;Header file for DFRobot&#39;s DFPlayer." alt="" coords="318,124,514,195"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="352,85,386,122,382,125,348,89"/>
+<area shape="rect" id="Node000003" href="$globals_8h.html" title="This is the main header file and shall include all other header files as well as declaration of all t..." alt="" coords="109,243,294,298"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="204,202,204,242,199,242,199,202"/>
+<area shape="rect" id="Node000004" href="$globals_8cpp.html" title="This file shall include all other global objects initialization." alt="" coords="5,346,190,402"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="165,311,127,348,124,344,161,308"/>
+<area shape="rect" id="Node000005" href="$sentences_8cpp.html" title="This file includes the member function definitions of sentence_queue class defined in sentences...." alt="" coords="213,346,398,402"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="242,308,279,344,276,348,238,311"/>
+</map>

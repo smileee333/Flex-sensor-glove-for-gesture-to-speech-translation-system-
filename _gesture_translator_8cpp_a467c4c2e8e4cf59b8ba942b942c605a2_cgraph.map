@@ -1,0 +1,5 @@
+<map id="wakeup_ISR" name="wakeup_ISR">
+<area shape="rect" id="Node000001" title="ISR meant for disabling the sleep mode and also de&#45;attaching the interrupt pin until waiting is requi..." alt="" coords="5,5,102,31"/>
+<area shape="rect" id="Node000002" href="$classpower_mode.html#a793bda0caa52974eca5b16b9134984d1" title="To configure the CPU as per input power mode and accordingly set the current power mode." alt="" coords="150,5,333,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,16,134,16,134,21,102,21"/>
+</map>

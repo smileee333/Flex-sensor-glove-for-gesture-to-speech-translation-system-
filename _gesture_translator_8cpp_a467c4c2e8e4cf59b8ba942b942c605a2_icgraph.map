@@ -1,0 +1,5 @@
+<map id="wakeup_ISR" name="wakeup_ISR">
+<area shape="rect" id="Node000001" title="ISR meant for disabling the sleep mode and also de&#45;attaching the interrupt pin until waiting is requi..." alt="" coords="245,13,341,38"/>
+<area shape="rect" id="Node000002" href="$classgesture__translator.html#a09ee1d19c0dbdd978c6e1ea8a1609812" title="Method to provide necessary halt in execution of control flow from playing the audio file of next wor..." alt="" coords="5,5,197,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,28,197,28,197,23,229,23"/>
+</map>
