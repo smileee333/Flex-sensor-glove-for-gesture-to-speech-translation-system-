@@ -1,0 +1,659 @@
+<toc label="Gesture translator" topic="index.html">
+  <topic label="Gesture to Speech Translator" href="index.html">
+    <topic label="Introduction" href="index.html#Intro"/>
+    <topic label="Assumptions" href="index.html#Assume"/>
+    <topic label="Problem statement" href="index.html#Problems"/>
+    <topic label="Requirement Specification" href="index.html#Requirements"/>
+    <topic label="Key Challanges" href="index.html#Challanges">
+      <topic label="Gesture Distinguishability" href="index.html#Challange_1"/>
+      <topic label="Wearability, low-power, cost effective and memory constrain" href="index.html#Challenge_2"/>
+      <topic label="Scalability and design re-use" href="index.html#Challenge_3"/>
+    </topic>
+    <topic label="Design prototyping" href="index.html#Prototyping"/>
+  </topic>
+  <topic label="Topics" href="topics.html">
+    <topic label="I/O Pin Number Macro" href="group___i___o__pins.html">
+      <topic label="DF_busy_pin" href="group___i___o__pins.html#gae1cb0c0949d10c73fdb1bae8bc64a73c"/>
+      <topic label="flex_sensor_output_pin_no" href="group___i___o__pins.html#ga59c31c9e3003775baa033cc1e532700d"/>
+      <topic label="SCL_pin_no" href="group___i___o__pins.html#ga6e69c4ee1e54aa465a945338e8b370de"/>
+      <topic label="SDA_pin_no" href="group___i___o__pins.html#ga226d93bc9ad658d79a3c0c8d110ea700"/>
+      <topic label="SEL_PORT" href="group___i___o__pins.html#gacea1d1879fa200983320fc1ed61ab043"/>
+      <topic label="UART_rx_pin_no" href="group___i___o__pins.html#ga8b18e116524dbe5f95bdef5645cb67b4"/>
+      <topic label="UART_tx_pin_no" href="group___i___o__pins.html#ga624bb03047b797f55e44640973c9c56f"/>
+    </topic>
+    <topic label="Data-type Macro" href="group___data__type.html">
+      <topic label="max_sensor_cnt_data_type_macro" href="group___data__type.html#ga5305dff57101337e163bae5f8e8a87b7"/>
+    </topic>
+    <topic label="bit-fields description Macro" href="group___bit__fields__description.html">
+      <topic label="lcd_char_cnt_bit" href="group___bit__fields__description.html#gadc34622ca74ce06cd16d53797a2eb788"/>
+      <topic label="lcd_line_cnt_bit" href="group___bit__fields__description.html#ga4239ba7ede10b22f6f04fedda367c9ba"/>
+      <topic label="max_gesture_cnt" href="group___bit__fields__description.html#ga0786072bbbc92db7bae3863a06fe663e"/>
+      <topic label="max_space_cnt" href="group___bit__fields__description.html#ga249656a37190a36fb6de7eb21b1e5d4c"/>
+      <topic label="sensor_cnt" href="group___bit__fields__description.html#gac1fdb1efd1f62ea4e131d1c13911fca7"/>
+      <topic label="word_cnt_bits" href="group___bit__fields__description.html#ga4161faf0071ab69cccf9844b857f9bbe"/>
+    </topic>
+    <topic label="Gesture-space Macro" href="group__space__macro.html">
+      <topic label="default_space_idx" href="group__space__macro.html#ga499f0c7dd0c28e2a638c9fdf6937d78c"/>
+      <topic label="first_speech_space_idx" href="group__space__macro.html#ga4a9918b1c12871c5de1c728741eef1a4"/>
+      <topic label="null_gesture_id" href="group__space__macro.html#ga3bfa2f2cdb245918614f65015075de11"/>
+      <topic label="space_cnt_value" href="group__space__macro.html#gabc1318db74731bd2f23e6bebda47f631"/>
+      <topic label="space_switch_idx" href="group__space__macro.html#gab99a93d7991755efd53054e108e9ec62"/>
+      <topic label="word_cnt" href="group__space__macro.html#ga343bf1c263054aab883929b79bed1c21"/>
+    </topic>
+    <topic label="Gesture-macro" href="group___gesture__specific__macro.html">
+      <topic label="control" href="group___gesture__specific__macro.html#gaee72edb18f8d4dc62c005533b45ab473"/>
+      <topic label="control_gesture_I_1_macro" href="group___gesture__specific__macro.html#ga3a90320b3642543b4bbfcea89178ef08"/>
+      <topic label="control_gesture_I_2_macro" href="group___gesture__specific__macro.html#gacb6da331c3b84c543b31b4ff10ff6889"/>
+      <topic label="control_gesture_I_2_string" href="group___gesture__specific__macro.html#ga35c4dc78b8c8476950cabba1d95a2b50"/>
+      <topic label="control_gesture_I_3_macro" href="group___gesture__specific__macro.html#gaa83489db5e0e4bd0d2eccece844e0e0f"/>
+      <topic label="control_gesture_I_3_string" href="group___gesture__specific__macro.html#gafad5ad3d7c87a24250817b42905ab6ba"/>
+      <topic label="control_gesture_I_cnt" href="group___gesture__specific__macro.html#gab9cc3fa3e761e8ff941e686cfb6387ce"/>
+      <topic label="control_handler_I_1" href="group___gesture__specific__macro.html#ga4a706a11c365c6845b61ea50167a48fb"/>
+      <topic label="control_handler_I_2" href="group___gesture__specific__macro.html#ga74f606c02ded0582aa225764fa2d5944"/>
+      <topic label="control_handler_I_3" href="group___gesture__specific__macro.html#gaac2b09a9680df497c90c91c6b5f3cd6a"/>
+      <topic label="master_gesture_1_macro" href="group___gesture__specific__macro.html#gac1f72e147fa9e03937ab392ecbc429f5"/>
+      <topic label="master_gesture_1_string" href="group___gesture__specific__macro.html#gab95b0e28efecdeb223c3ef2e4d858002"/>
+      <topic label="master_gesture_2_macro" href="group___gesture__specific__macro.html#ga96d2cf30b3f5adaed10139cb7779a752"/>
+      <topic label="master_gesture_2_string" href="group___gesture__specific__macro.html#ga0d58b209549af0c3d76ca564d0f2b24d"/>
+      <topic label="master_gesture_cnt" href="group___gesture__specific__macro.html#ga5daf5146aefdec4e773c71a363f6393b"/>
+      <topic label="master_handler_1" href="group___gesture__specific__macro.html#gaaaed258902407a69df782f6d1001c4b9"/>
+      <topic label="master_handler_2" href="group___gesture__specific__macro.html#gaf94ca9ef674b62da6bb13d7845052e60"/>
+      <topic label="null_gesture_macro" href="group___gesture__specific__macro.html#gae60568f8e38e6bc4769a0bb5fa5cc3d5"/>
+      <topic label="space_switch_control_gesture_I_macro" href="group___gesture__specific__macro.html#ga6c0092953678e80418dd75b96341a979"/>
+      <topic label="space_switch_control_gesture_I_string" href="group___gesture__specific__macro.html#ga389ac2a0d7398e4a53c0ead828c310ac"/>
+      <topic label="space_switch_handler" href="group___gesture__specific__macro.html#ga28175e40b686a1adfd9160e6220d9569"/>
+      <topic label="space_switch_speech_gesture_I_macro" href="group___gesture__specific__macro.html#gaeecf52efacb9c72bf762a1d5e74e2133"/>
+      <topic label="space_switch_speech_gesture_I_string" href="group___gesture__specific__macro.html#gaf5819932adfb9127a1a015b86fab49e0"/>
+      <topic label="speech_gesture_I_10_macro" href="group___gesture__specific__macro.html#ga7c2dddd027218a4cb89b600d8baf4587"/>
+      <topic label="speech_gesture_I_10_string" href="group___gesture__specific__macro.html#gad819423e974ab0106a2308bdb3512087"/>
+      <topic label="speech_gesture_I_1_macro" href="group___gesture__specific__macro.html#gabfa5ccceb981a073ece90d8aa4cf3475"/>
+      <topic label="speech_gesture_I_1_string" href="group___gesture__specific__macro.html#gad4636ac26752130fc7e3cd05ef67e817"/>
+      <topic label="speech_gesture_I_2_macro" href="group___gesture__specific__macro.html#gabfa33970c5d9bdb36fe4b2c78d2f2618"/>
+      <topic label="speech_gesture_I_2_string" href="group___gesture__specific__macro.html#ga01fccb0567806c48b812f1f2b37378b7"/>
+      <topic label="speech_gesture_I_3_macro" href="group___gesture__specific__macro.html#gaafb3748e2ec1577cc7fac651e4e6bf42"/>
+      <topic label="speech_gesture_I_3_string" href="group___gesture__specific__macro.html#ga017b6c30de2f0e35025fd4806820d4ca"/>
+      <topic label="speech_gesture_I_4_macro" href="group___gesture__specific__macro.html#ga6ffdc0722a6dd97095faa549d466cb3a"/>
+      <topic label="speech_gesture_I_4_string" href="group___gesture__specific__macro.html#ga7fd8236a0b1591d5b4d31e46e9a975fa"/>
+      <topic label="speech_gesture_I_5_macro" href="group___gesture__specific__macro.html#gab17fa3bf2e6a455c317f090d727effde"/>
+      <topic label="speech_gesture_I_5_string" href="group___gesture__specific__macro.html#ga27d965f62f1cc8d431487e140c4fa1e0"/>
+      <topic label="speech_gesture_I_6_macro" href="group___gesture__specific__macro.html#ga0faf8df80746fafb592947ec8680fdd4"/>
+      <topic label="speech_gesture_I_6_string" href="group___gesture__specific__macro.html#gae29ce97cf7930bd4db853fe07ed62156"/>
+      <topic label="speech_gesture_I_7_macro" href="group___gesture__specific__macro.html#ga1cec4ba3aba1c6dc10b70548560b60c7"/>
+      <topic label="speech_gesture_I_7_string" href="group___gesture__specific__macro.html#gadcdfd0bb7f3bce31656e54227d4c52d2"/>
+      <topic label="speech_gesture_I_8_macro" href="group___gesture__specific__macro.html#ga3d7d7348eeb418e20be799d411b38a0a"/>
+      <topic label="speech_gesture_I_8_string" href="group___gesture__specific__macro.html#ga1dbb486d7570f342959d8ddb44cbbf73"/>
+      <topic label="speech_gesture_I_9_macro" href="group___gesture__specific__macro.html#gadc0561cccaee2e4d747af02408c633e8"/>
+      <topic label="speech_gesture_I_9_string" href="group___gesture__specific__macro.html#gacb3e8ed1b1f0fcdd5f8d8e8ba1bae199"/>
+      <topic label="speech_gesture_I_cnt" href="group___gesture__specific__macro.html#ga39fc2cbabcb6b45c84455cfd6e16733d"/>
+      <topic label="speech_handler" href="group___gesture__specific__macro.html#ga5d1bb9b197e0c5bcbde1191316274696"/>
+    </topic>
+    <topic label="Timer-specific macro" href="group___timer__specific__macro.html">
+      <topic label="compare_reg_macro" href="group___timer__specific__macro.html#ga93ea1904057ee872cbb35781c6f96b1d"/>
+      <topic label="ISR_CODE" href="group___timer__specific__macro.html#ga3d8016d174bed6a04e883ae71779e993"/>
+      <topic label="OCRxX_ref" href="group___timer__specific__macro.html#ga26bd4712b25da695741f65a78d2c022c"/>
+      <topic label="OCRxX_val_macro" href="group___timer__specific__macro.html#ga7aa0f522fd2a97659cff6f1882470284"/>
+      <topic label="preScaleVal_macro" href="group___timer__specific__macro.html#ga9c5d00a6cf502c057d317f3710069a04"/>
+      <topic label="TCCRxA_ref" href="group___timer__specific__macro.html#gab4537a5e090c884fed2a5703f36bf8c5"/>
+      <topic label="TCCRxB_ref" href="group___timer__specific__macro.html#ga37ddd4e1ed3423601c018fd45bc5d8da"/>
+      <topic label="TCNTx_ref" href="group___timer__specific__macro.html#ga06ab3961fca125cf149e327fa580d906"/>
+      <topic label="timer_bits" href="group___timer__specific__macro.html#gaa258166b76e603eb8b7a3030b05e31d8"/>
+      <topic label="TIMSKx_ref" href="group___timer__specific__macro.html#ga566fd3227e133b651cf1173abe8a40d3"/>
+    </topic>
+    <topic label="Pin-change interrupt macro" href="group___pin___change___interrupt__specific__macro.html">
+      <topic label="PCICR_ref" href="group___pin___change___interrupt__specific__macro.html#gaa2c7dcaa24e378fed8d3bea3078bc27a"/>
+      <topic label="PCMSK_ref" href="group___pin___change___interrupt__specific__macro.html#ga81bb5aee63db5a190cbdf8eb5b2e5a94"/>
+    </topic>
+    <topic label="DF-mini player macro" href="group___d_f__mini__player__specific__macro.html">
+      <topic label="FPSerial" href="group___d_f__mini__player__specific__macro.html#ga6a5320018717ddd97c1ab0551c1da499"/>
+    </topic>
+    <topic label="display macro" href="group___l_c_d__display__specific__macro.html">
+      <topic label="lcdDisplay_used" href="group___l_c_d__display__specific__macro.html#gaa1bc546c7f666be8a80df932029d7b02"/>
+    </topic>
+    <topic label="memory_storage_specific_macro power and storage macros" href="group___low__power__mode__and__flash.html">
+    </topic>
+    <topic label="Database Interface inputs" href="group___gesture.html">
+      <topic label="interface_gesture_input&lt; max_sensor_cnt_data_type &gt;" href="structinterface__gesture__input.html">
+        <topic label="gesture_ptr" href="structinterface__gesture__input.html#a6bbabbfdf81c86f494938a5576f9d61e"/>
+        <topic label="space_id" href="structinterface__gesture__input.html#aa4ef0c6e90a177af5be1d9cff2212d09"/>
+      </topic>
+      <topic label="interface_handler_input&lt; max_sensor_cnt_data_type &gt;" href="structinterface__handler__input.html">
+        <topic label="handler_ptr" href="structinterface__handler__input.html#a27b6a1296014df6e43b0e81839ed5511"/>
+        <topic label="space_id" href="structinterface__handler__input.html#ad7d6f15cceff087a5443bf4f665ed820"/>
+      </topic>
+      <topic label="database_interface&lt; max_sensor_cnt_data_type &gt;" href="classdatabase__interface.html">
+        <topic label="extractGestures" href="classdatabase__interface.html#aeb8230f9a74d7db80b1566fc4b2ba835"/>
+        <topic label="extractHandlers" href="classdatabase__interface.html#a6c9c614e7c1620602325df60816d1925"/>
+        <topic label="getSpaceCnt" href="classdatabase__interface.html#a840223be6b08192b95628c6566b0bf5f"/>
+        <topic label="getSpeechSpaceGestureCntArray" href="classdatabase__interface.html#a2e54e5c8ca753c124ba20146a65accc4"/>
+        <topic label="getSpeechStartIdx" href="classdatabase__interface.html#a15aac710c90614b5de283db876d49952"/>
+      </topic>
+      <topic label="control_gesture_I_list" href="group___gesture.html#ga653951e17e8209ebdf6c439a6da664da"/>
+      <topic label="control_handler_I_list" href="group___gesture.html#gac38bf8ebbaea73147fbb6ead93430069"/>
+      <topic label="database" href="group___gesture.html#ga82f58f30633c1967e0179f0e5ecfe2d5"/>
+      <topic label="master_gesture_list" href="group___gesture.html#gae3279ac3393e6704276485b5bef7e1dc"/>
+      <topic label="master_handler_list" href="group___gesture.html#ga852fd95f8b0f826db563bf2d069eef92"/>
+      <topic label="speech_gesture_I_list" href="group___gesture.html#ga38b3f7bbe2a3ddabb90ed696fdedb498"/>
+      <topic label="speech_handler_list" href="group___gesture.html#gabedcf3207f572f9fd9cbbbd65d7d43ee"/>
+    </topic>
+  </topic>
+  <topic label="Classes" href="annotated.html">
+    <topic label="Class List" href="annotated.html">
+      <topic label="database_interface" href="classdatabase__interface.html">
+        <topic label="extractGestures" href="classdatabase__interface.html#aeb8230f9a74d7db80b1566fc4b2ba835"/>
+        <topic label="extractHandlers" href="classdatabase__interface.html#a6c9c614e7c1620602325df60816d1925"/>
+        <topic label="getSpaceCnt" href="classdatabase__interface.html#a840223be6b08192b95628c6566b0bf5f"/>
+        <topic label="getSpeechSpaceGestureCntArray" href="classdatabase__interface.html#a2e54e5c8ca753c124ba20146a65accc4"/>
+        <topic label="getSpeechStartIdx" href="classdatabase__interface.html#a15aac710c90614b5de283db876d49952"/>
+      </topic>
+      <topic label="database_meta_info" href="structdatabase__meta__info.html">
+        <topic label="__pad0__" href="structdatabase__meta__info.html#addf5eaac6c2bba929dc1a1e70c2d0321"/>
+        <topic label="__pad1__" href="structdatabase__meta__info.html#aa942a64b10dfa557cd06da09fa6a6a4c"/>
+      </topic>
+      <topic label="DFRobotDFPlayerMini" href="class_d_f_robot_d_f_player_mini.html">
+        <topic label="advertise" href="class_d_f_robot_d_f_player_mini.html#a301edae12f4bcb99dab86b93efc53717"/>
+        <topic label="available" href="class_d_f_robot_d_f_player_mini.html#afe1ebc1b5858d297ad1dc6f097910056"/>
+        <topic label="begin" href="class_d_f_robot_d_f_player_mini.html#a43bfafa431e2f997ffc78f77fa4f1433"/>
+        <topic label="disableDAC" href="class_d_f_robot_d_f_player_mini.html#a10ebab7ecb8c7db7cab7d72e2d040c76"/>
+        <topic label="disableLoop" href="class_d_f_robot_d_f_player_mini.html#ad08591af66613077e1a9c31d5e02f5b7"/>
+        <topic label="disableLoopAll" href="class_d_f_robot_d_f_player_mini.html#a9362e678bdeba979d1f24757adde5e58"/>
+        <topic label="enableDAC" href="class_d_f_robot_d_f_player_mini.html#ad9d231672403313e6629c472ba16db95"/>
+        <topic label="enableLoop" href="class_d_f_robot_d_f_player_mini.html#ad1d52d2c7c37c0ed8015f3da221ef57f"/>
+        <topic label="enableLoopAll" href="class_d_f_robot_d_f_player_mini.html#a226771f28531fb1cc0642d5a66d96b92"/>
+        <topic label="EQ" href="class_d_f_robot_d_f_player_mini.html#af055cbb11c456c2e720ba42839b25c6c"/>
+        <topic label="handleError" href="class_d_f_robot_d_f_player_mini.html#a7f24eb42b1a83f92b47a8cb611aca5b1"/>
+        <topic label="handleMessage" href="class_d_f_robot_d_f_player_mini.html#a58872c325229c406056887fb51d8f13f"/>
+        <topic label="loop" href="class_d_f_robot_d_f_player_mini.html#a01ae96a69b7bccc13991a9c9cac29c82"/>
+        <topic label="loopFolder" href="class_d_f_robot_d_f_player_mini.html#a6ac9e28c69f9b4a7e8c49daad541c546"/>
+        <topic label="next" href="class_d_f_robot_d_f_player_mini.html#a8d338c6544b219f16e185642980f4ca5"/>
+        <topic label="outputDevice" href="class_d_f_robot_d_f_player_mini.html#a31771513ed92c74f5b9727ea86a9d4df"/>
+        <topic label="outputSetting" href="class_d_f_robot_d_f_player_mini.html#ab630d75e967b3dfc63f8b161943d4ff0"/>
+        <topic label="pause" href="class_d_f_robot_d_f_player_mini.html#a2a9cfd90c70db1da22bff3901f8da58f"/>
+        <topic label="play" href="class_d_f_robot_d_f_player_mini.html#aa36be63e5234e255a7bd70ffb710ee91"/>
+        <topic label="playFolder" href="class_d_f_robot_d_f_player_mini.html#aa7fe526e2004883587462f825a6f334d"/>
+        <topic label="playLargeFolder" href="class_d_f_robot_d_f_player_mini.html#a23c31ea04c7bf989aed4806b2406db43"/>
+        <topic label="playMp3Folder" href="class_d_f_robot_d_f_player_mini.html#aafc1354aa545855ca50d4fd179831e03"/>
+        <topic label="previous" href="class_d_f_robot_d_f_player_mini.html#a17430ef857e45c6379ee4ce8bf660776"/>
+        <topic label="randomAll" href="class_d_f_robot_d_f_player_mini.html#a01ee76774b327cbb28f08f78d610d3bb"/>
+        <topic label="read" href="class_d_f_robot_d_f_player_mini.html#a6f4c1930832f55f934a67666d812a8e9"/>
+        <topic label="readCommand" href="class_d_f_robot_d_f_player_mini.html#a5e0b865a1143ccbd235fb3137620e28b"/>
+        <topic label="readCurrentFileNumber" href="class_d_f_robot_d_f_player_mini.html#a8bc3b4add4861ad04379400e506f0153"/>
+        <topic label="readCurrentFileNumber" href="class_d_f_robot_d_f_player_mini.html#abab22e553a9e4fa0404befdd495825a3"/>
+        <topic label="readEQ" href="class_d_f_robot_d_f_player_mini.html#aa3dab7d542184b09ae9359e9f3699180"/>
+        <topic label="readFileCounts" href="class_d_f_robot_d_f_player_mini.html#a3fea7d42579d24f13ff5eef66403a792"/>
+        <topic label="readFileCounts" href="class_d_f_robot_d_f_player_mini.html#a852ee4e8439c277545ac3b9f430b0a69"/>
+        <topic label="readFileCountsInFolder" href="class_d_f_robot_d_f_player_mini.html#a7a50fc4d8cbfe5a5f8270238500bd2dc"/>
+        <topic label="readFolderCounts" href="class_d_f_robot_d_f_player_mini.html#a9d3d7a4e104932a750a1978608467e35"/>
+        <topic label="readState" href="class_d_f_robot_d_f_player_mini.html#a643076c8d9fa46f02e89bc76832ba8fd"/>
+        <topic label="readType" href="class_d_f_robot_d_f_player_mini.html#a0db35c38a979bcd92c72fd506a49319d"/>
+        <topic label="readVolume" href="class_d_f_robot_d_f_player_mini.html#ac3eec597cd0c7500a703bc18a149a76d"/>
+        <topic label="reset" href="class_d_f_robot_d_f_player_mini.html#a3a68b31c78af0afa286522081fe281ad"/>
+        <topic label="setTimeOut" href="class_d_f_robot_d_f_player_mini.html#aa117a0354fa9838366221afb71a195ef"/>
+        <topic label="sleep" href="class_d_f_robot_d_f_player_mini.html#ab82e406443a8003cdd99406c4f4c2713"/>
+        <topic label="start" href="class_d_f_robot_d_f_player_mini.html#a3b0f337a8f837e3c6271249b6dda65db"/>
+        <topic label="stop" href="class_d_f_robot_d_f_player_mini.html#afc80c59ba0f7ed9d9b1431f2f4c3d2ac"/>
+        <topic label="stopAdvertise" href="class_d_f_robot_d_f_player_mini.html#ab06b97d7bb439757aab6a592f1ca09b3"/>
+        <topic label="volume" href="class_d_f_robot_d_f_player_mini.html#a1b767f88490310af1ffe3b773ec9f6a6"/>
+        <topic label="volumeDown" href="class_d_f_robot_d_f_player_mini.html#ac936a3cb495b5b8761c69b341636e9da"/>
+        <topic label="volumeUp" href="class_d_f_robot_d_f_player_mini.html#ae7720241726abc92f9d7d0dff5361f7e"/>
+        <topic label="waitAvailable" href="class_d_f_robot_d_f_player_mini.html#a29b207b6c1014c8f6db56d54d46a45d2"/>
+        <topic label="_handleCommand" href="class_d_f_robot_d_f_player_mini.html#adae24f35a3f8e28d370fd7def2c00ec6"/>
+        <topic label="_handleParameter" href="class_d_f_robot_d_f_player_mini.html#a196796bd456903a910311633ae1bb7c6"/>
+        <topic label="_handleType" href="class_d_f_robot_d_f_player_mini.html#a8fb60b204a454b248fb2fb0da3b60f79"/>
+        <topic label="_isAvailable" href="class_d_f_robot_d_f_player_mini.html#afd98009ae9665d21a6104b2883441d0b"/>
+        <topic label="_isSending" href="class_d_f_robot_d_f_player_mini.html#aca0a942ca4a07ec6aa44130e5d6171bf"/>
+      </topic>
+      <topic label="DL_node" href="struct_d_l__node.html">
+        <topic label="data" href="struct_d_l__node.html#a56d6a431cafe6a0cadbf80e05a13eda0"/>
+        <topic label="next" href="struct_d_l__node.html#aa18695c45810e00b9271f57b37d8488c"/>
+        <topic label="previous" href="struct_d_l__node.html#a2da1819b41ca8db69fc894226665ef9b"/>
+      </topic>
+      <topic label="gesture" href="structgesture.html">
+        <topic label="code" href="structgesture.html#aa59df5694d98a3ad2628c94cca6f0275"/>
+        <topic label="string" href="structgesture.html#a1fbe439a91d591fc6012bc8bf1bb167d"/>
+      </topic>
+      <topic label="gesture_database" href="structgesture__database.html">
+        <topic label="data_database" href="structgesture__database.html#a627a6bcf4389df5d410def2975118abd"/>
+        <topic label="handler_database" href="structgesture__database.html#a1e48c12031b722397ab1cdb3765fafe2"/>
+        <topic label="meta_info" href="structgesture__database.html#abe00eb10681ea700cba8c4ce67ebec6b"/>
+      </topic>
+      <topic label="gesture_space" href="classgesture__space.html">
+        <topic label="gesture_space" href="classgesture__space.html#aea7ec57cfda8ea3cd7c34a582c4c05a4"/>
+        <topic label="extractGestureString" href="classgesture__space.html#a6e9356c379e4a79da39862832f1002d2"/>
+        <topic label="invokeGestureHandler" href="classgesture__space.html#a275ae7326db1afe99f149673ff82ab90"/>
+        <topic label="searchGesture" href="classgesture__space.html#a0fe5f4bb2534640c319dbfc9b893c317"/>
+      </topic>
+      <topic label="gesture_space_data_database_node" href="structgesture__space__data__database__node.html">
+        <topic label="cnt" href="structgesture__space__data__database__node.html#a8d95db7694c3e1fc120ec97a0c0b9d7d"/>
+        <topic label="gesture_ptr" href="structgesture__space__data__database__node.html#a8f8073d8872a9250369a17d3fb9bf5c9"/>
+        <topic label="in_gesture" href="structgesture__space__data__database__node.html#abfa597d23959c0ec5f9148a65cf52ffe"/>
+      </topic>
+      <topic label="gesture_space_handler_database_node" href="structgesture__space__handler__database__node.html">
+        <topic label="cnt" href="structgesture__space__handler__database__node.html#a3d71237265e0c65e45fecf8e961894ad"/>
+        <topic label="handler_ptr" href="structgesture__space__handler__database__node.html#ade3e93ea6de2e3802be693b36b8ef6f0"/>
+      </topic>
+      <topic label="gesture_translator" href="classgesture__translator.html">
+        <topic label="gesture_translator" href="classgesture__translator.html#a80313a3cccf800c51c28c4f8f4b7f722"/>
+        <topic label="isTranslatorAlive" href="classgesture__translator.html#a216d276282e83b368bf909b561384da4"/>
+        <topic label="translateGesture" href="classgesture__translator.html#a0e936dd2ad056acbb304a3b8a39ecee2"/>
+        <topic label="waitUntilTranslatorAvailable" href="classgesture__translator.html#a09ee1d19c0dbdd978c6e1ea8a1609812"/>
+      </topic>
+      <topic label="interface_gesture_input" href="structinterface__gesture__input.html">
+        <topic label="gesture_ptr" href="structinterface__gesture__input.html#a6bbabbfdf81c86f494938a5576f9d61e"/>
+        <topic label="space_id" href="structinterface__gesture__input.html#aa4ef0c6e90a177af5be1d9cff2212d09"/>
+      </topic>
+      <topic label="interface_handler_input" href="structinterface__handler__input.html">
+        <topic label="handler_ptr" href="structinterface__handler__input.html#a27b6a1296014df6e43b0e81839ed5511"/>
+        <topic label="space_id" href="structinterface__handler__input.html#ad7d6f15cceff087a5443bf4f665ed820"/>
+      </topic>
+      <topic label="powerMode" href="classpower_mode.html">
+        <topic label="getPowerMode" href="classpower_mode.html#a18e35065e30056efbf2408ee0d2bbcbe"/>
+        <topic label="setPowerMode" href="classpower_mode.html#a793bda0caa52974eca5b16b9134984d1"/>
+        <topic label="startPowerMode" href="classpower_mode.html#a4ff63827d6b475e91b26c6f0d569eed1"/>
+      </topic>
+      <topic label="sample_ids" href="structsample__ids.html">
+        <topic label="gesture_id" href="structsample__ids.html#a8052545bcd0474cc7e5aa0bf1880e5c5"/>
+        <topic label="space_id" href="structsample__ids.html#a55e5d561cc412a3db6aaf4f670052d3a"/>
+      </topic>
+      <topic label="sample_space" href="classsample__space.html">
+        <topic label="sample_space" href="classsample__space.html#adcc249e2c69f8c0729473a6fd3a824a8"/>
+        <topic label="getCurrentGestureCode" href="classsample__space.html#ac986511b08e3243aa86fb62441dd6de9"/>
+        <topic label="getSamplingStatus" href="classsample__space.html#ae924c2ea42549b68534363f028d28af8"/>
+        <topic label="isSampleChanged" href="classsample__space.html#a88cb8c738abe096230682c925a2487e6"/>
+        <topic label="setSamplingStatus" href="classsample__space.html#a49d2f530fdc2d8b2e8662602ece230b1"/>
+        <topic label="takeSample" href="classsample__space.html#a584f53ac276b6994b64e41f7c077eb06"/>
+        <topic label="updateLastSample" href="classsample__space.html#a94dcd3dc2cdb688f167377c416a96393"/>
+      </topic>
+      <topic label="sampled_gesture" href="unionsampled__gesture.html">
+        <topic label="flex_state" href="unionsampled__gesture.html#ac69ad515ad5a257f9d5ee4b26d0b5092"/>
+        <topic label="value" href="unionsampled__gesture.html#a515e0241ab69ea9814691418c7cdb6f9"/>
+      </topic>
+      <topic label="sentence_queue" href="classsentence__queue.html">
+      </topic>
+      <topic label="space" href="structspace.html">
+        <topic label="gesture_arr" href="structspace.html#a9bb3231c87878fd81b58efae859e567b"/>
+        <topic label="gesture_cnt" href="structspace.html#ad17e5822d99cf9a1dfea4a8a7f21ced7"/>
+        <topic label="handler_arr" href="structspace.html#a87a84c95d4aaae337e4b00aad65890c1"/>
+      </topic>
+      <topic label="Timer" href="class_timer.html">
+      </topic>
+    </topic>
+    <topic label="Class Index" href="classes.html"/>
+    <topic label="Class Members" href="functions.html">
+      <topic label="All" href="functions.html"/>
+      <topic label="Functions" href="functions_func.html"/>
+      <topic label="Variables" href="functions_vars.html"/>
+    </topic>
+  </topic>
+  <topic label="Files" href="files.html">
+    <topic label="File List" href="files.html">
+      <topic label="Users" href="dir_d522931ffa1371640980b621734a4381.html">
+        <topic label="Admin" href="dir_31059516c74acec96613626ef7aefcf7.html">
+          <topic label="Downloads" href="dir_c821a3b2d2ee5194f22eaaf3969c9746.html">
+            <topic label="gesture_translator" href="dir_de5a7830a3f5e8c3c1c34cb506e81451.html">
+              <topic label="Code_Doc" href="dir_bc2eb4b2de5c0b6228508314f7bbc848.html">
+                <topic label="docs" href="dir_6f0a834159b20383ddbe4a1ee4463be6.html">
+                </topic>
+                <topic label="include" href="dir_c1b865e6d81c13fb40da0ded16f8ed10.html">
+                  <topic label="CONFIG.h" href="_c_o_n_f_i_g_8h.html">
+                    <topic label="compare_reg_macro" href="group___timer__specific__macro.html#ga93ea1904057ee872cbb35781c6f96b1d"/>
+                    <topic label="control" href="group___gesture__specific__macro.html#gaee72edb18f8d4dc62c005533b45ab473"/>
+                    <topic label="control_gesture_I_1_macro" href="group___gesture__specific__macro.html#ga3a90320b3642543b4bbfcea89178ef08"/>
+                    <topic label="control_gesture_I_2_macro" href="group___gesture__specific__macro.html#gacb6da331c3b84c543b31b4ff10ff6889"/>
+                    <topic label="control_gesture_I_2_string" href="group___gesture__specific__macro.html#ga35c4dc78b8c8476950cabba1d95a2b50"/>
+                    <topic label="control_gesture_I_3_macro" href="group___gesture__specific__macro.html#gaa83489db5e0e4bd0d2eccece844e0e0f"/>
+                    <topic label="control_gesture_I_3_string" href="group___gesture__specific__macro.html#gafad5ad3d7c87a24250817b42905ab6ba"/>
+                    <topic label="control_gesture_I_cnt" href="group___gesture__specific__macro.html#gab9cc3fa3e761e8ff941e686cfb6387ce"/>
+                    <topic label="control_handler_I_1" href="group___gesture__specific__macro.html#ga4a706a11c365c6845b61ea50167a48fb"/>
+                    <topic label="control_handler_I_2" href="group___gesture__specific__macro.html#ga74f606c02ded0582aa225764fa2d5944"/>
+                    <topic label="control_handler_I_3" href="group___gesture__specific__macro.html#gaac2b09a9680df497c90c91c6b5f3cd6a"/>
+                    <topic label="default_space_idx" href="group__space__macro.html#ga499f0c7dd0c28e2a638c9fdf6937d78c"/>
+                    <topic label="DF_busy_pin" href="group___i___o__pins.html#gae1cb0c0949d10c73fdb1bae8bc64a73c"/>
+                    <topic label="first_speech_space_idx" href="group__space__macro.html#ga4a9918b1c12871c5de1c728741eef1a4"/>
+                    <topic label="flex_sensor_output_pin_no" href="group___i___o__pins.html#ga59c31c9e3003775baa033cc1e532700d"/>
+                    <topic label="FPSerial" href="group___d_f__mini__player__specific__macro.html#ga6a5320018717ddd97c1ab0551c1da499"/>
+                    <topic label="ISR_CODE" href="group___timer__specific__macro.html#ga3d8016d174bed6a04e883ae71779e993"/>
+                    <topic label="lcd_char_cnt_bit" href="group___bit__fields__description.html#gadc34622ca74ce06cd16d53797a2eb788"/>
+                    <topic label="lcd_line_cnt_bit" href="group___bit__fields__description.html#ga4239ba7ede10b22f6f04fedda367c9ba"/>
+                    <topic label="lcdDisplay_used" href="group___l_c_d__display__specific__macro.html#gaa1bc546c7f666be8a80df932029d7b02"/>
+                    <topic label="master_gesture_1_macro" href="group___gesture__specific__macro.html#gac1f72e147fa9e03937ab392ecbc429f5"/>
+                    <topic label="master_gesture_1_string" href="group___gesture__specific__macro.html#gab95b0e28efecdeb223c3ef2e4d858002"/>
+                    <topic label="master_gesture_2_macro" href="group___gesture__specific__macro.html#ga96d2cf30b3f5adaed10139cb7779a752"/>
+                    <topic label="master_gesture_2_string" href="group___gesture__specific__macro.html#ga0d58b209549af0c3d76ca564d0f2b24d"/>
+                    <topic label="master_gesture_cnt" href="group___gesture__specific__macro.html#ga5daf5146aefdec4e773c71a363f6393b"/>
+                    <topic label="master_handler_1" href="group___gesture__specific__macro.html#gaaaed258902407a69df782f6d1001c4b9"/>
+                    <topic label="master_handler_2" href="group___gesture__specific__macro.html#gaf94ca9ef674b62da6bb13d7845052e60"/>
+                    <topic label="max_gesture_cnt" href="group___bit__fields__description.html#ga0786072bbbc92db7bae3863a06fe663e"/>
+                    <topic label="max_sensor_cnt_data_type_macro" href="group___data__type.html#ga5305dff57101337e163bae5f8e8a87b7"/>
+                    <topic label="max_space_cnt" href="group___bit__fields__description.html#ga249656a37190a36fb6de7eb21b1e5d4c"/>
+                    <topic label="null_gesture_id" href="group__space__macro.html#ga3bfa2f2cdb245918614f65015075de11"/>
+                    <topic label="null_gesture_macro" href="group___gesture__specific__macro.html#gae60568f8e38e6bc4769a0bb5fa5cc3d5"/>
+                    <topic label="OCRxX_ref" href="group___timer__specific__macro.html#ga26bd4712b25da695741f65a78d2c022c"/>
+                    <topic label="OCRxX_val_macro" href="group___timer__specific__macro.html#ga7aa0f522fd2a97659cff6f1882470284"/>
+                    <topic label="PCICR_ref" href="group___pin___change___interrupt__specific__macro.html#gaa2c7dcaa24e378fed8d3bea3078bc27a"/>
+                    <topic label="PCMSK_ref" href="group___pin___change___interrupt__specific__macro.html#ga81bb5aee63db5a190cbdf8eb5b2e5a94"/>
+                    <topic label="preScaleVal_macro" href="group___timer__specific__macro.html#ga9c5d00a6cf502c057d317f3710069a04"/>
+                    <topic label="SCL_pin_no" href="group___i___o__pins.html#ga6e69c4ee1e54aa465a945338e8b370de"/>
+                    <topic label="SDA_pin_no" href="group___i___o__pins.html#ga226d93bc9ad658d79a3c0c8d110ea700"/>
+                    <topic label="SEL_PORT" href="group___i___o__pins.html#gacea1d1879fa200983320fc1ed61ab043"/>
+                    <topic label="sensor_cnt" href="group___bit__fields__description.html#gac1fdb1efd1f62ea4e131d1c13911fca7"/>
+                    <topic label="space_cnt_value" href="group__space__macro.html#gabc1318db74731bd2f23e6bebda47f631"/>
+                    <topic label="space_switch_control_gesture_I_macro" href="group___gesture__specific__macro.html#ga6c0092953678e80418dd75b96341a979"/>
+                    <topic label="space_switch_control_gesture_I_string" href="group___gesture__specific__macro.html#ga389ac2a0d7398e4a53c0ead828c310ac"/>
+                    <topic label="space_switch_handler" href="group___gesture__specific__macro.html#ga28175e40b686a1adfd9160e6220d9569"/>
+                    <topic label="space_switch_idx" href="group__space__macro.html#gab99a93d7991755efd53054e108e9ec62"/>
+                    <topic label="space_switch_speech_gesture_I_macro" href="group___gesture__specific__macro.html#gaeecf52efacb9c72bf762a1d5e74e2133"/>
+                    <topic label="space_switch_speech_gesture_I_string" href="group___gesture__specific__macro.html#gaf5819932adfb9127a1a015b86fab49e0"/>
+                    <topic label="speech_gesture_I_10_macro" href="group___gesture__specific__macro.html#ga7c2dddd027218a4cb89b600d8baf4587"/>
+                    <topic label="speech_gesture_I_10_string" href="group___gesture__specific__macro.html#gad819423e974ab0106a2308bdb3512087"/>
+                    <topic label="speech_gesture_I_1_macro" href="group___gesture__specific__macro.html#gabfa5ccceb981a073ece90d8aa4cf3475"/>
+                    <topic label="speech_gesture_I_1_string" href="group___gesture__specific__macro.html#gad4636ac26752130fc7e3cd05ef67e817"/>
+                    <topic label="speech_gesture_I_2_macro" href="group___gesture__specific__macro.html#gabfa33970c5d9bdb36fe4b2c78d2f2618"/>
+                    <topic label="speech_gesture_I_2_string" href="group___gesture__specific__macro.html#ga01fccb0567806c48b812f1f2b37378b7"/>
+                    <topic label="speech_gesture_I_3_macro" href="group___gesture__specific__macro.html#gaafb3748e2ec1577cc7fac651e4e6bf42"/>
+                    <topic label="speech_gesture_I_3_string" href="group___gesture__specific__macro.html#ga017b6c30de2f0e35025fd4806820d4ca"/>
+                    <topic label="speech_gesture_I_4_macro" href="group___gesture__specific__macro.html#ga6ffdc0722a6dd97095faa549d466cb3a"/>
+                    <topic label="speech_gesture_I_4_string" href="group___gesture__specific__macro.html#ga7fd8236a0b1591d5b4d31e46e9a975fa"/>
+                    <topic label="speech_gesture_I_5_macro" href="group___gesture__specific__macro.html#gab17fa3bf2e6a455c317f090d727effde"/>
+                    <topic label="speech_gesture_I_5_string" href="group___gesture__specific__macro.html#ga27d965f62f1cc8d431487e140c4fa1e0"/>
+                    <topic label="speech_gesture_I_6_macro" href="group___gesture__specific__macro.html#ga0faf8df80746fafb592947ec8680fdd4"/>
+                    <topic label="speech_gesture_I_6_string" href="group___gesture__specific__macro.html#gae29ce97cf7930bd4db853fe07ed62156"/>
+                    <topic label="speech_gesture_I_7_macro" href="group___gesture__specific__macro.html#ga1cec4ba3aba1c6dc10b70548560b60c7"/>
+                    <topic label="speech_gesture_I_7_string" href="group___gesture__specific__macro.html#gadcdfd0bb7f3bce31656e54227d4c52d2"/>
+                    <topic label="speech_gesture_I_8_macro" href="group___gesture__specific__macro.html#ga3d7d7348eeb418e20be799d411b38a0a"/>
+                    <topic label="speech_gesture_I_8_string" href="group___gesture__specific__macro.html#ga1dbb486d7570f342959d8ddb44cbbf73"/>
+                    <topic label="speech_gesture_I_9_macro" href="group___gesture__specific__macro.html#gadc0561cccaee2e4d747af02408c633e8"/>
+                    <topic label="speech_gesture_I_9_string" href="group___gesture__specific__macro.html#gacb3e8ed1b1f0fcdd5f8d8e8ba1bae199"/>
+                    <topic label="speech_gesture_I_cnt" href="group___gesture__specific__macro.html#ga39fc2cbabcb6b45c84455cfd6e16733d"/>
+                    <topic label="speech_handler" href="group___gesture__specific__macro.html#ga5d1bb9b197e0c5bcbde1191316274696"/>
+                    <topic label="TCCRxA_ref" href="group___timer__specific__macro.html#gab4537a5e090c884fed2a5703f36bf8c5"/>
+                    <topic label="TCCRxB_ref" href="group___timer__specific__macro.html#ga37ddd4e1ed3423601c018fd45bc5d8da"/>
+                    <topic label="TCNTx_ref" href="group___timer__specific__macro.html#ga06ab3961fca125cf149e327fa580d906"/>
+                    <topic label="timer_bits" href="group___timer__specific__macro.html#gaa258166b76e603eb8b7a3030b05e31d8"/>
+                    <topic label="TIMSKx_ref" href="group___timer__specific__macro.html#ga566fd3227e133b651cf1173abe8a40d3"/>
+                    <topic label="UART_rx_pin_no" href="group___i___o__pins.html#ga8b18e116524dbe5f95bdef5645cb67b4"/>
+                    <topic label="UART_tx_pin_no" href="group___i___o__pins.html#ga624bb03047b797f55e44640973c9c56f"/>
+                    <topic label="word_cnt" href="group__space__macro.html#ga343bf1c263054aab883929b79bed1c21"/>
+                    <topic label="word_cnt_bits" href="group___bit__fields__description.html#ga4161faf0071ab69cccf9844b857f9bbe"/>
+                  </topic>
+                  <topic label="Display.h" href="_display_8h.html">
+                    <topic label="lcd" href="_display_8h.html#a22188321424f1fde72b801b9062d2111"/>
+                  </topic>
+                  <topic label="gesture_database.h" href="gesture__database_8h.html">
+                    <topic label="gesture_database&lt; max_sensor_cnt_data_type &gt;" href="structgesture__database.html">
+                      <topic label="data_database" href="structgesture__database.html#a627a6bcf4389df5d410def2975118abd"/>
+                      <topic label="handler_database" href="structgesture__database.html#a1e48c12031b722397ab1cdb3765fafe2"/>
+                      <topic label="meta_info" href="structgesture__database.html#abe00eb10681ea700cba8c4ce67ebec6b"/>
+                    </topic>
+                    <topic label="database_meta_info&lt; max_sensor_cnt_data_type &gt;" href="structdatabase__meta__info.html">
+                      <topic label="__pad0__" href="structdatabase__meta__info.html#addf5eaac6c2bba929dc1a1e70c2d0321"/>
+                      <topic label="__pad1__" href="structdatabase__meta__info.html#aa942a64b10dfa557cd06da09fa6a6a4c"/>
+                    </topic>
+                    <topic label="gesture_space_data_database_node&lt; max_sensor_cnt_data_type &gt;" href="structgesture__space__data__database__node.html">
+                      <topic label="cnt" href="structgesture__space__data__database__node.html#a8d95db7694c3e1fc120ec97a0c0b9d7d"/>
+                      <topic label="gesture_ptr" href="structgesture__space__data__database__node.html#a8f8073d8872a9250369a17d3fb9bf5c9"/>
+                      <topic label="in_gesture" href="structgesture__space__data__database__node.html#abfa597d23959c0ec5f9148a65cf52ffe"/>
+                    </topic>
+                    <topic label="gesture" href="structgesture.html">
+                      <topic label="code" href="structgesture.html#aa59df5694d98a3ad2628c94cca6f0275"/>
+                      <topic label="string" href="structgesture.html#a1fbe439a91d591fc6012bc8bf1bb167d"/>
+                    </topic>
+                    <topic label="gesture_space_handler_database_node&lt; max_sensor_cnt_data_type &gt;" href="structgesture__space__handler__database__node.html">
+                      <topic label="cnt" href="structgesture__space__handler__database__node.html#a3d71237265e0c65e45fecf8e961894ad"/>
+                      <topic label="handler_ptr" href="structgesture__space__handler__database__node.html#ade3e93ea6de2e3802be693b36b8ef6f0"/>
+                    </topic>
+                    <topic label="sample_ids&lt; max_sensor_cnt_data_type &gt;" href="structsample__ids.html">
+                      <topic label="gesture_id" href="structsample__ids.html#a8052545bcd0474cc7e5aa0bf1880e5c5"/>
+                      <topic label="space_id" href="structsample__ids.html#a55e5d561cc412a3db6aaf4f670052d3a"/>
+                    </topic>
+                    <topic label="gesture_handler" href="gesture__database_8h.html#a3cc30178867bc07fe28a5e86ca5de54b"/>
+                    <topic label="gesture_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481">
+                      <topic label="null_gesture" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a181475f895e5adb197963012acd81bd1"/>
+                      <topic label="master_gesture_1_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481af018b25bb1be4c7c48f7fc68a184e906"/>
+                      <topic label="master_gesture_2_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481aebd1fe2154de48807b1006dd53199f74"/>
+                      <topic label="space_switch_control_gesture_I_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a788f38f8d8bb912a85a20872b929d5b9"/>
+                      <topic label="space_switch_speech_gesture_I_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a88980fc0ddf3978273d29869593f3bc2"/>
+                      <topic label="control_gesture_I_1_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481ad75d7b50ad694b6f32077f92c8fccbd0"/>
+                      <topic label="control_gesture_I_2_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a504d9c13e831e3df873a5d4e2528531a"/>
+                      <topic label="control_gesture_I_3_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a1fa179d8a8d1c978f20ce8a4a216e923"/>
+                      <topic label="speech_gesture_I_1_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a779793fe04e9d0adf51213c1bbd281a2"/>
+                      <topic label="speech_gesture_I_2_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a0fe9e70a95a1017f51ff6c80d5016469"/>
+                      <topic label="speech_gesture_I_3_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a95287d8ad637418f29b1f2a07ed943e5"/>
+                      <topic label="speech_gesture_I_4_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a89613b6438fe2c6bfae063d4bac724a6"/>
+                      <topic label="speech_gesture_I_5_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481ad1274a2f9d2c21e9b0d6f1616f5098f8"/>
+                      <topic label="speech_gesture_I_6_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a7b020bc51689b7bf8afb6adc3638d497"/>
+                      <topic label="speech_gesture_I_7_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a9dbd3683269e7d8f4d3e90431b574c16"/>
+                      <topic label="speech_gesture_I_8_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a0d988a3ed256514c371cf93f8509a82f"/>
+                      <topic label="speech_gesture_I_9_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a3d0b089c9cc669e4672d18cb80ec92ae"/>
+                      <topic label="speech_gesture_I_10_code" href="gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481ac16a587e238710bf1ae6d387bf53671e"/>
+                    </topic>
+                  </topic>
+                  <topic label="gesture_database_interface.h" href="gesture__database__interface_8h.html">
+                  </topic>
+                  <topic label="gesture_spaces.h" href="gesture__spaces_8h.html">
+                    <topic label="space&lt; max_sensor_cnt_data_type &gt;" href="structspace.html">
+                      <topic label="gesture_arr" href="structspace.html#a9bb3231c87878fd81b58efae859e567b"/>
+                      <topic label="gesture_cnt" href="structspace.html#ad17e5822d99cf9a1dfea4a8a7f21ced7"/>
+                      <topic label="handler_arr" href="structspace.html#a87a84c95d4aaae337e4b00aad65890c1"/>
+                    </topic>
+                    <topic label="gesture_space&lt; max_sensor_cnt_data_type &gt;" href="classgesture__space.html">
+                      <topic label="gesture_space" href="classgesture__space.html#aea7ec57cfda8ea3cd7c34a582c4c05a4"/>
+                      <topic label="extractGestureString" href="classgesture__space.html#a6e9356c379e4a79da39862832f1002d2"/>
+                      <topic label="invokeGestureHandler" href="classgesture__space.html#a275ae7326db1afe99f149673ff82ab90"/>
+                      <topic label="searchGesture" href="classgesture__space.html#a0fe5f4bb2534640c319dbfc9b893c317"/>
+                    </topic>
+                  </topic>
+                  <topic label="GestureTranslator.h" href="_gesture_translator_8h.html">
+                    <topic label="gesture_translator&lt; max_sensor_cnt_data_type &gt;" href="classgesture__translator.html">
+                      <topic label="gesture_translator" href="classgesture__translator.html#a80313a3cccf800c51c28c4f8f4b7f722"/>
+                      <topic label="isTranslatorAlive" href="classgesture__translator.html#a216d276282e83b368bf909b561384da4"/>
+                      <topic label="translateGesture" href="classgesture__translator.html#a0e936dd2ad056acbb304a3b8a39ecee2"/>
+                      <topic label="waitUntilTranslatorAvailable" href="classgesture__translator.html#a09ee1d19c0dbdd978c6e1ea8a1609812"/>
+                    </topic>
+                    <topic label="myDFPlayer" href="_gesture_translator_8h.html#af3d87283b673ca2c5039bae393306a9e"/>
+                  </topic>
+                  <topic label="globals.h" href="globals_8h.html">
+                    <topic label="display" href="globals_8h.html#a3849547342b2440abebd9c302bf7af00"/>
+                    <topic label="gesture_space_bank" href="globals_8h.html#a32acc42ee21f8c26f6016d138336e3fa"/>
+                    <topic label="interface" href="globals_8h.html#a9b982a9f68f5b9eee057e708e3fad251"/>
+                    <topic label="Power" href="globals_8h.html#a4b2edfeddd044f6f520d8b59527716c5"/>
+                    <topic label="sampleData" href="globals_8h.html#a10ee827aa317e028e33f346a49e9fe4f"/>
+                    <topic label="samplingTimer" href="globals_8h.html#a37ae97cd436e2442e8c489e05d8ffe3b"/>
+                    <topic label="sentence" href="globals_8h.html#a914b162e5e5ce5e00ceb2f5254ce566f"/>
+                    <topic label="translator" href="globals_8h.html#a2f39678ae45054a3668fdb7435ad9973"/>
+                  </topic>
+                  <topic label="low_power_modes.h" href="low__power__modes_8h.html">
+                    <topic label="powerMode" href="classpower_mode.html">
+                      <topic label="getPowerMode" href="classpower_mode.html#a18e35065e30056efbf2408ee0d2bbcbe"/>
+                      <topic label="setPowerMode" href="classpower_mode.html#a793bda0caa52974eca5b16b9134984d1"/>
+                      <topic label="startPowerMode" href="classpower_mode.html#a4ff63827d6b475e91b26c6f0d569eed1"/>
+                    </topic>
+                    <topic label="power_mode" href="low__power__modes_8h.html#a6bc96fc1c00a47f71f1f971bf5e6e93e">
+                      <topic label="no_sleep" href="low__power__modes_8h.html#a6bc96fc1c00a47f71f1f971bf5e6e93eae381ea4926622b087d59772958eba8fd"/>
+                      <topic label="deep_sleep" href="low__power__modes_8h.html#a6bc96fc1c00a47f71f1f971bf5e6e93eae67bf86d4a919894c9a3598c4e5928e8"/>
+                      <topic label="idle_sleep" href="low__power__modes_8h.html#a6bc96fc1c00a47f71f1f971bf5e6e93ea13e88cb68015c21d18203d4be3aed4ed"/>
+                    </topic>
+                  </topic>
+                  <topic label="sample.h" href="sample_8h.html">
+                    <topic label="sampled_gesture&lt; max_sensor_cnt_data_type &gt;" href="unionsampled__gesture.html">
+                      <topic label="flex_state" href="unionsampled__gesture.html#ac69ad515ad5a257f9d5ee4b26d0b5092"/>
+                      <topic label="value" href="unionsampled__gesture.html#a515e0241ab69ea9814691418c7cdb6f9"/>
+                    </topic>
+                    <topic label="sample_space&lt; max_sensor_cnt_data_type &gt;" href="classsample__space.html">
+                      <topic label="sample_space" href="classsample__space.html#adcc249e2c69f8c0729473a6fd3a824a8"/>
+                      <topic label="getCurrentGestureCode" href="classsample__space.html#ac986511b08e3243aa86fb62441dd6de9"/>
+                      <topic label="getSamplingStatus" href="classsample__space.html#ae924c2ea42549b68534363f028d28af8"/>
+                      <topic label="isSampleChanged" href="classsample__space.html#a88cb8c738abe096230682c925a2487e6"/>
+                      <topic label="setSamplingStatus" href="classsample__space.html#a49d2f530fdc2d8b2e8662602ece230b1"/>
+                      <topic label="takeSample" href="classsample__space.html#a584f53ac276b6994b64e41f7c077eb06"/>
+                      <topic label="updateLastSample" href="classsample__space.html#a94dcd3dc2cdb688f167377c416a96393"/>
+                    </topic>
+                  </topic>
+                  <topic label="Sampler.h" href="_sampler_8h.html">
+                    <topic label="Timer&lt; preScaleVal, compare_reg, compare_val &gt;" href="class_timer.html">
+                    </topic>
+                  </topic>
+                  <topic label="sentences.h" href="sentences_8h.html">
+                    <topic label="DL_node&lt; node_data &gt;" href="struct_d_l__node.html">
+                      <topic label="data" href="struct_d_l__node.html#a56d6a431cafe6a0cadbf80e05a13eda0"/>
+                      <topic label="next" href="struct_d_l__node.html#aa18695c45810e00b9271f57b37d8488c"/>
+                      <topic label="previous" href="struct_d_l__node.html#a2da1819b41ca8db69fc894226665ef9b"/>
+                    </topic>
+                    <topic label="sentence_queue&lt; max_sensor_cnt_data_type &gt;" href="classsentence__queue.html">
+                    </topic>
+                    <topic label="id_string" href="sentences_8h.html#afe8db9e9ffd31c79bf3564b2d50d2be6"/>
+                  </topic>
+                </topic>
+                <topic label="libraries" href="dir_e4b9797d8aff0b669156bce0e093edfc.html">
+                  <topic label="DF_mini_player" href="dir_635d7e8dfed005bd2d7f822ffe01a9bc.html">
+                    <topic label="DFRobotDFPlayerMini.cpp" href="_d_f_robot_d_f_player_mini_8cpp.html"/>
+                    <topic label="DFRobotDFPlayerMini.h" href="_d_f_robot_d_f_player_mini_8h.html">
+                      <topic label="DFRobotDFPlayerMini" href="class_d_f_robot_d_f_player_mini.html">
+                        <topic label="advertise" href="class_d_f_robot_d_f_player_mini.html#a301edae12f4bcb99dab86b93efc53717"/>
+                        <topic label="available" href="class_d_f_robot_d_f_player_mini.html#afe1ebc1b5858d297ad1dc6f097910056"/>
+                        <topic label="begin" href="class_d_f_robot_d_f_player_mini.html#a43bfafa431e2f997ffc78f77fa4f1433"/>
+                        <topic label="disableDAC" href="class_d_f_robot_d_f_player_mini.html#a10ebab7ecb8c7db7cab7d72e2d040c76"/>
+                        <topic label="disableLoop" href="class_d_f_robot_d_f_player_mini.html#ad08591af66613077e1a9c31d5e02f5b7"/>
+                        <topic label="disableLoopAll" href="class_d_f_robot_d_f_player_mini.html#a9362e678bdeba979d1f24757adde5e58"/>
+                        <topic label="enableDAC" href="class_d_f_robot_d_f_player_mini.html#ad9d231672403313e6629c472ba16db95"/>
+                        <topic label="enableLoop" href="class_d_f_robot_d_f_player_mini.html#ad1d52d2c7c37c0ed8015f3da221ef57f"/>
+                        <topic label="enableLoopAll" href="class_d_f_robot_d_f_player_mini.html#a226771f28531fb1cc0642d5a66d96b92"/>
+                        <topic label="EQ" href="class_d_f_robot_d_f_player_mini.html#af055cbb11c456c2e720ba42839b25c6c"/>
+                        <topic label="handleError" href="class_d_f_robot_d_f_player_mini.html#a7f24eb42b1a83f92b47a8cb611aca5b1"/>
+                        <topic label="handleMessage" href="class_d_f_robot_d_f_player_mini.html#a58872c325229c406056887fb51d8f13f"/>
+                        <topic label="loop" href="class_d_f_robot_d_f_player_mini.html#a01ae96a69b7bccc13991a9c9cac29c82"/>
+                        <topic label="loopFolder" href="class_d_f_robot_d_f_player_mini.html#a6ac9e28c69f9b4a7e8c49daad541c546"/>
+                        <topic label="next" href="class_d_f_robot_d_f_player_mini.html#a8d338c6544b219f16e185642980f4ca5"/>
+                        <topic label="outputDevice" href="class_d_f_robot_d_f_player_mini.html#a31771513ed92c74f5b9727ea86a9d4df"/>
+                        <topic label="outputSetting" href="class_d_f_robot_d_f_player_mini.html#ab630d75e967b3dfc63f8b161943d4ff0"/>
+                        <topic label="pause" href="class_d_f_robot_d_f_player_mini.html#a2a9cfd90c70db1da22bff3901f8da58f"/>
+                        <topic label="play" href="class_d_f_robot_d_f_player_mini.html#aa36be63e5234e255a7bd70ffb710ee91"/>
+                        <topic label="playFolder" href="class_d_f_robot_d_f_player_mini.html#aa7fe526e2004883587462f825a6f334d"/>
+                        <topic label="playLargeFolder" href="class_d_f_robot_d_f_player_mini.html#a23c31ea04c7bf989aed4806b2406db43"/>
+                        <topic label="playMp3Folder" href="class_d_f_robot_d_f_player_mini.html#aafc1354aa545855ca50d4fd179831e03"/>
+                        <topic label="previous" href="class_d_f_robot_d_f_player_mini.html#a17430ef857e45c6379ee4ce8bf660776"/>
+                        <topic label="randomAll" href="class_d_f_robot_d_f_player_mini.html#a01ee76774b327cbb28f08f78d610d3bb"/>
+                        <topic label="read" href="class_d_f_robot_d_f_player_mini.html#a6f4c1930832f55f934a67666d812a8e9"/>
+                        <topic label="readCommand" href="class_d_f_robot_d_f_player_mini.html#a5e0b865a1143ccbd235fb3137620e28b"/>
+                        <topic label="readCurrentFileNumber" href="class_d_f_robot_d_f_player_mini.html#a8bc3b4add4861ad04379400e506f0153"/>
+                        <topic label="readCurrentFileNumber" href="class_d_f_robot_d_f_player_mini.html#abab22e553a9e4fa0404befdd495825a3"/>
+                        <topic label="readEQ" href="class_d_f_robot_d_f_player_mini.html#aa3dab7d542184b09ae9359e9f3699180"/>
+                        <topic label="readFileCounts" href="class_d_f_robot_d_f_player_mini.html#a3fea7d42579d24f13ff5eef66403a792"/>
+                        <topic label="readFileCounts" href="class_d_f_robot_d_f_player_mini.html#a852ee4e8439c277545ac3b9f430b0a69"/>
+                        <topic label="readFileCountsInFolder" href="class_d_f_robot_d_f_player_mini.html#a7a50fc4d8cbfe5a5f8270238500bd2dc"/>
+                        <topic label="readFolderCounts" href="class_d_f_robot_d_f_player_mini.html#a9d3d7a4e104932a750a1978608467e35"/>
+                        <topic label="readState" href="class_d_f_robot_d_f_player_mini.html#a643076c8d9fa46f02e89bc76832ba8fd"/>
+                        <topic label="readType" href="class_d_f_robot_d_f_player_mini.html#a0db35c38a979bcd92c72fd506a49319d"/>
+                        <topic label="readVolume" href="class_d_f_robot_d_f_player_mini.html#ac3eec597cd0c7500a703bc18a149a76d"/>
+                        <topic label="reset" href="class_d_f_robot_d_f_player_mini.html#a3a68b31c78af0afa286522081fe281ad"/>
+                        <topic label="setTimeOut" href="class_d_f_robot_d_f_player_mini.html#aa117a0354fa9838366221afb71a195ef"/>
+                        <topic label="sleep" href="class_d_f_robot_d_f_player_mini.html#ab82e406443a8003cdd99406c4f4c2713"/>
+                        <topic label="start" href="class_d_f_robot_d_f_player_mini.html#a3b0f337a8f837e3c6271249b6dda65db"/>
+                        <topic label="stop" href="class_d_f_robot_d_f_player_mini.html#afc80c59ba0f7ed9d9b1431f2f4c3d2ac"/>
+                        <topic label="stopAdvertise" href="class_d_f_robot_d_f_player_mini.html#ab06b97d7bb439757aab6a592f1ca09b3"/>
+                        <topic label="volume" href="class_d_f_robot_d_f_player_mini.html#a1b767f88490310af1ffe3b773ec9f6a6"/>
+                        <topic label="volumeDown" href="class_d_f_robot_d_f_player_mini.html#ac936a3cb495b5b8761c69b341636e9da"/>
+                        <topic label="volumeUp" href="class_d_f_robot_d_f_player_mini.html#ae7720241726abc92f9d7d0dff5361f7e"/>
+                        <topic label="waitAvailable" href="class_d_f_robot_d_f_player_mini.html#a29b207b6c1014c8f6db56d54d46a45d2"/>
+                        <topic label="_handleCommand" href="class_d_f_robot_d_f_player_mini.html#adae24f35a3f8e28d370fd7def2c00ec6"/>
+                        <topic label="_handleParameter" href="class_d_f_robot_d_f_player_mini.html#a196796bd456903a910311633ae1bb7c6"/>
+                        <topic label="_handleType" href="class_d_f_robot_d_f_player_mini.html#a8fb60b204a454b248fb2fb0da3b60f79"/>
+                        <topic label="_isAvailable" href="class_d_f_robot_d_f_player_mini.html#afd98009ae9665d21a6104b2883441d0b"/>
+                        <topic label="_isSending" href="class_d_f_robot_d_f_player_mini.html#aca0a942ca4a07ec6aa44130e5d6171bf"/>
+                      </topic>
+                      <topic label="Advertise" href="_d_f_robot_d_f_player_mini_8h.html#a043c244094e7fdf0d76f92b0892d31d6"/>
+                      <topic label="Busy" href="_d_f_robot_d_f_player_mini_8h.html#afc3191a9c6807c799e406a386eb9a453"/>
+                      <topic label="CheckSumNotMatch" href="_d_f_robot_d_f_player_mini_8h.html#a8dc339b9dd9de91f1a69a4931aef2660"/>
+                      <topic label="DFPLAYER_DEVICE_AUX" href="_d_f_robot_d_f_player_mini_8h.html#ac0f578517b6b3aafd62fa7c99915c20d"/>
+                      <topic label="DFPLAYER_DEVICE_FLASH" href="_d_f_robot_d_f_player_mini_8h.html#a609ffaf21e9697549d77aea44b0a50cc"/>
+                      <topic label="DFPLAYER_DEVICE_SD" href="_d_f_robot_d_f_player_mini_8h.html#aa1fa0c2521804a11f84b0896f05fdf03"/>
+                      <topic label="DFPLAYER_DEVICE_SLEEP" href="_d_f_robot_d_f_player_mini_8h.html#a3e193b8d4212246284c778d1de72fba1"/>
+                      <topic label="DFPLAYER_DEVICE_U_DISK" href="_d_f_robot_d_f_player_mini_8h.html#a6de9ea3b142b474c5fd9b5ef67c4c97d"/>
+                      <topic label="DFPLAYER_EQ_BASS" href="_d_f_robot_d_f_player_mini_8h.html#ab1480e729fbce769f1ce4dc39904d797"/>
+                      <topic label="DFPLAYER_EQ_CLASSIC" href="_d_f_robot_d_f_player_mini_8h.html#af1b9c077ef926be45e7332cf17414382"/>
+                      <topic label="DFPLAYER_EQ_JAZZ" href="_d_f_robot_d_f_player_mini_8h.html#a4efc697d015a3566889beced449853f4"/>
+                      <topic label="DFPLAYER_EQ_NORMAL" href="_d_f_robot_d_f_player_mini_8h.html#a425c0f746434f243116455fb8b733421"/>
+                      <topic label="DFPLAYER_EQ_POP" href="_d_f_robot_d_f_player_mini_8h.html#a63d1813bbd2f3a1dfe1b0985fdd0e819"/>
+                      <topic label="DFPLAYER_EQ_ROCK" href="_d_f_robot_d_f_player_mini_8h.html#ae07bbe96d01364c522ca0b7e79979001"/>
+                      <topic label="DFPLAYER_RECEIVED_LENGTH" href="_d_f_robot_d_f_player_mini_8h.html#afd5612fbbc2bcd4cca119dfa6925d291"/>
+                      <topic label="DFPLAYER_SEND_LENGTH" href="_d_f_robot_d_f_player_mini_8h.html#a0881ca9506f9aed36b5035bee07e3d59"/>
+                      <topic label="DFPlayerCardInserted" href="_d_f_robot_d_f_player_mini_8h.html#a4b0cc6dbbe12187897aa5cda3ad39eea"/>
+                      <topic label="DFPlayerCardOnline" href="_d_f_robot_d_f_player_mini_8h.html#ac90d8b26aa260f3857f64388612997a8"/>
+                      <topic label="DFPlayerCardRemoved" href="_d_f_robot_d_f_player_mini_8h.html#a559ef7f3441b619025568ef4ed5d1e23"/>
+                      <topic label="DFPlayerCardUSBOnline" href="_d_f_robot_d_f_player_mini_8h.html#a885915c1d5d387c279d82968418b44bb"/>
+                      <topic label="DFPlayerError" href="_d_f_robot_d_f_player_mini_8h.html#a7f471183c29b94d7f0e053c07e33505b"/>
+                      <topic label="DFPlayerFeedBack" href="_d_f_robot_d_f_player_mini_8h.html#a79b84b9180ffdd7440cf0968ee27d6b9"/>
+                      <topic label="DFPlayerPlayFinished" href="_d_f_robot_d_f_player_mini_8h.html#a53f772182e031abfb5fb20bab68cb1b1"/>
+                      <topic label="DFPlayerUSBInserted" href="_d_f_robot_d_f_player_mini_8h.html#a276df89d274dc3e36cdfb02128aed481"/>
+                      <topic label="DFPlayerUSBOnline" href="_d_f_robot_d_f_player_mini_8h.html#a189bb7d828be321df73097e347d2744a"/>
+                      <topic label="DFPlayerUSBRemoved" href="_d_f_robot_d_f_player_mini_8h.html#a4bf9ca3327ad07d34eb3ef3455a6f29f"/>
+                      <topic label="FileIndexOut" href="_d_f_robot_d_f_player_mini_8h.html#ac0dc5855ebdffd3d96aadd1053cbcd23"/>
+                      <topic label="FileMismatch" href="_d_f_robot_d_f_player_mini_8h.html#acfceda90b716bef68a768201e607218e"/>
+                      <topic label="SerialWrongStack" href="_d_f_robot_d_f_player_mini_8h.html#aae3980c9f7a661d9aec74d3fa5c8eace"/>
+                      <topic label="Sleeping" href="_d_f_robot_d_f_player_mini_8h.html#ad5344c36cd747fb1ba91be19da910279"/>
+                      <topic label="Stack_ACK" href="_d_f_robot_d_f_player_mini_8h.html#a6cba1e90fceab567734bf67551595402"/>
+                      <topic label="Stack_CheckSum" href="_d_f_robot_d_f_player_mini_8h.html#a35dd70e62c81f142d405f6bfdbeed5c6"/>
+                      <topic label="Stack_Command" href="_d_f_robot_d_f_player_mini_8h.html#ab6676b339d9303991b9778e5947e23c4"/>
+                      <topic label="Stack_End" href="_d_f_robot_d_f_player_mini_8h.html#adcd9a1605f9f6b1f99ad8f710ba1a709"/>
+                      <topic label="Stack_Header" href="_d_f_robot_d_f_player_mini_8h.html#a9492df32e6dc5806718a107a6dc31001"/>
+                      <topic label="Stack_Length" href="_d_f_robot_d_f_player_mini_8h.html#aa98f5a4590bb77600fa02a45ef22d9af"/>
+                      <topic label="Stack_Parameter" href="_d_f_robot_d_f_player_mini_8h.html#af5d5edce833048b81ffcf4f50bc817f9"/>
+                      <topic label="Stack_Version" href="_d_f_robot_d_f_player_mini_8h.html#adb62699640380f453f7b9298457596af"/>
+                      <topic label="TimeOut" href="_d_f_robot_d_f_player_mini_8h.html#a81ab28c6eeb8e29291a21268805f6814"/>
+                      <topic label="WrongStack" href="_d_f_robot_d_f_player_mini_8h.html#aaf513baf61db25626380a3544a1921cc"/>
+                    </topic>
+                  </topic>
+                </topic>
+                <topic label="src" href="dir_17f4724c6285b0d60ba497fe680091d6.html">
+                  <topic label="Display.cpp" href="_display_8cpp.html"/>
+                  <topic label="gesture_database.cpp" href="gesture__database_8cpp.html">
+                    <topic label="control_gesture_I_list" href="group___gesture.html#ga653951e17e8209ebdf6c439a6da664da"/>
+                    <topic label="control_handler_I_list" href="group___gesture.html#gac38bf8ebbaea73147fbb6ead93430069"/>
+                    <topic label="database" href="group___gesture.html#ga82f58f30633c1967e0179f0e5ecfe2d5"/>
+                    <topic label="master_gesture_list" href="group___gesture.html#gae3279ac3393e6704276485b5bef7e1dc"/>
+                    <topic label="master_handler_list" href="group___gesture.html#ga852fd95f8b0f826db563bf2d069eef92"/>
+                    <topic label="speech_gesture_I_list" href="group___gesture.html#ga38b3f7bbe2a3ddabb90ed696fdedb498"/>
+                    <topic label="speech_handler_list" href="group___gesture.html#gabedcf3207f572f9fd9cbbbd65d7d43ee"/>
+                  </topic>
+                  <topic label="gesture_database_interface.cpp" href="gesture__database__interface_8cpp.html"/>
+                  <topic label="gesture_spaces.cpp" href="gesture__spaces_8cpp.html"/>
+                  <topic label="GestureTranslator.cpp" href="_gesture_translator_8cpp.html">
+                    <topic label="wakeup_ISR" href="_gesture_translator_8cpp.html#a467c4c2e8e4cf59b8ba942b942c605a2"/>
+                  </topic>
+                  <topic label="globals.cpp" href="globals_8cpp.html">
+                    <topic label="display" href="globals_8cpp.html#a1665755b0226f8e652b86b73467bec2c"/>
+                    <topic label="gesture_space_bank" href="globals_8cpp.html#a32acc42ee21f8c26f6016d138336e3fa"/>
+                    <topic label="Power" href="globals_8cpp.html#a4b2edfeddd044f6f520d8b59527716c5"/>
+                    <topic label="sampleData" href="globals_8cpp.html#a10ee827aa317e028e33f346a49e9fe4f"/>
+                    <topic label="samplingTimer" href="globals_8cpp.html#a37ae97cd436e2442e8c489e05d8ffe3b"/>
+                    <topic label="sentence" href="globals_8cpp.html#a914b162e5e5ce5e00ceb2f5254ce566f"/>
+                    <topic label="translator" href="globals_8cpp.html#a2f39678ae45054a3668fdb7435ad9973"/>
+                  </topic>
+                  <topic label="low_power_modes.cpp" href="low__power__modes_8cpp.html"/>
+                  <topic label="main.cpp" href="main_8cpp.html">
+                    <topic label="ISR" href="main_8cpp.html#a52965f5950da3086356849bcdd467620"/>
+                    <topic label="loop" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f"/>
+                    <topic label="setup" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d"/>
+                  </topic>
+                  <topic label="sample.cpp" href="sample_8cpp.html"/>
+                  <topic label="Sampler.cpp" href="_sampler_8cpp.html">
+                    <topic label="ISR" href="_sampler_8cpp.html#a7ff75570a59fca0aede9ab54c93bef1f"/>
+                  </topic>
+                  <topic label="sentences.cpp" href="sentences_8cpp.html"/>
+                </topic>
+              </topic>
+            </topic>
+          </topic>
+        </topic>
+      </topic>
+    </topic>
+    <topic label="File Members" href="globals.html">
+      <topic label="All" href="globals.html"/>
+      <topic label="Functions" href="globals_func.html"/>
+      <topic label="Variables" href="globals_vars.html"/>
+      <topic label="Typedefs" href="globals_type.html"/>
+      <topic label="Enumerations" href="globals_enum.html"/>
+      <topic label="Enumerator" href="globals_eval.html"/>
+      <topic label="Macros" href="globals_defs.html"/>
+    </topic>
+  </topic>
+</toc>
