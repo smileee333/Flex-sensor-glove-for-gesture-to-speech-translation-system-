@@ -1,0 +1,10 @@
+<map id="DFRobotDFPlayerMini::waitAvailable" name="DFRobotDFPlayerMini::waitAvailable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,159,75"/>
+<area shape="rect" id="Node000002" href="$class_d_f_robot_d_f_player_mini.html#afe1ebc1b5858d297ad1dc6f097910056" title=" " alt="" coords="207,5,360,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,41,191,36,192,42,159,46"/>
+<area shape="rect" id="Node000003" href="$class_d_f_robot_d_f_player_mini.html#a7f24eb42b1a83f92b47a8cb611aca5b1" title=" " alt="" coords="408,35,561,75"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="159,54,207,55,360,55,392,55,392,60,360,60,207,60,159,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="361,34,393,39,392,44,360,39"/>
+<area shape="rect" id="Node000004" href="$class_d_f_robot_d_f_player_mini.html#a58872c325229c406056887fb51d8f13f" title=" " alt="" coords="609,35,763,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="562,52,594,52,594,58,562,58"/>
+</map>

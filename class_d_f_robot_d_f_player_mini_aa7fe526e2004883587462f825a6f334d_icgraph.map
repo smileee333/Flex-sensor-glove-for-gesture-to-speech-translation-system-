@@ -1,0 +1,5 @@
+<map id="DFRobotDFPlayerMini::playFolder" name="DFRobotDFPlayerMini::playFolder">
+<area shape="rect" id="Node000001" title=" " alt="" coords="179,5,332,46"/>
+<area shape="rect" id="Node000002" href="$classgesture__translator.html#a0e936dd2ad056acbb304a3b8a39ecee2" title="Method to send command to DF mini player module to play audio as per input gesture space id and gestu..." alt="" coords="5,5,131,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,28,131,28,131,23,163,23"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="DFRobotDFPlayerMini::readCurrentFileNumber" name="DFRobotDFPlayerMini::readCurrentFileNumber">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,170,111"/>
+<area shape="rect" id="Node000002" href="$class_d_f_robot_d_f_player_mini.html#a6f4c1930832f55f934a67666d812a8e9" title=" " alt="" coords="218,5,371,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,68,213,49,214,54,155,73"/>
+<area shape="rect" id="Node000003" href="$class_d_f_robot_d_f_player_mini.html#a0db35c38a979bcd92c72fd506a49319d" title=" " alt="" coords="218,71,371,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,88,202,88,202,94,170,94"/>
+<area shape="rect" id="Node000004" href="$class_d_f_robot_d_f_player_mini.html#a29b207b6c1014c8f6db56d54d46a45d2" title=" " alt="" coords="218,136,371,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="155,109,214,128,213,133,153,114"/>
+<area shape="rect" id="Node000005" href="$class_d_f_robot_d_f_player_mini.html#afe1ebc1b5858d297ad1dc6f097910056" title=" " alt="" coords="419,107,572,147"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="371,143,403,138,404,143,372,148"/>
+<area shape="rect" id="Node000006" href="$class_d_f_robot_d_f_player_mini.html#a7f24eb42b1a83f92b47a8cb611aca5b1" title=" " alt="" coords="620,136,774,177"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="371,156,419,156,572,156,605,156,605,161,572,162,419,162,371,161"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="573,136,605,140,605,146,572,141"/>
+<area shape="rect" id="Node000007" href="$class_d_f_robot_d_f_player_mini.html#a58872c325229c406056887fb51d8f13f" title=" " alt="" coords="822,136,975,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="774,154,806,154,806,159,774,159"/>
+</map>
