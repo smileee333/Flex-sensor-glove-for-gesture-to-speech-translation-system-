@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['challanges_0',['Key Challanges',['../index.html#Challanges',1,'']]],
+  ['change_20interrupt_20macro_1',['Pin-change interrupt macro',['../group___pin___change___interrupt__specific__macro.html',1,'']]],
+  ['checksumnotmatch_2',['CheckSumNotMatch',['../_d_f_robot_d_f_player_mini_8h.html#a8dc339b9dd9de91f1a69a4931aef2660',1,'DFRobotDFPlayerMini.h']]],
+  ['cnt_3',['cnt',['../structgesture__space__data__database__node.html#a8d95db7694c3e1fc120ec97a0c0b9d7d',1,'gesture_space_data_database_node::cnt'],['../structgesture__space__handler__database__node.html#a3d71237265e0c65e45fecf8e961894ad',1,'gesture_space_handler_database_node::cnt']]],
+  ['code_4',['code',['../structgesture.html#aa59df5694d98a3ad2628c94cca6f0275',1,'gesture']]],
+  ['compare_5freg_5fmacro_5',['compare_reg_macro',['../group___timer__specific__macro.html#ga93ea1904057ee872cbb35781c6f96b1d',1,'CONFIG.h']]],
+  ['config_2eh_6',['CONFIG.h',['../_c_o_n_f_i_g_8h.html',1,'']]],
+  ['constrain_7',['Wearability, low-power, cost effective and memory constrain',['../index.html#Challenge_2',1,'']]],
+  ['control_8',['control',['../group___gesture__specific__macro.html#gaee72edb18f8d4dc62c005533b45ab473',1,'CONFIG.h']]],
+  ['control_5fgesture_5fi_5f1_5fcode_9',['control_gesture_I_1_code',['../gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481ad75d7b50ad694b6f32077f92c8fccbd0',1,'gesture_database.h']]],
+  ['control_5fgesture_5fi_5f1_5fmacro_10',['control_gesture_I_1_macro',['../group___gesture__specific__macro.html#ga3a90320b3642543b4bbfcea89178ef08',1,'CONFIG.h']]],
+  ['control_5fgesture_5fi_5f2_5fcode_11',['control_gesture_I_2_code',['../gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a504d9c13e831e3df873a5d4e2528531a',1,'gesture_database.h']]],
+  ['control_5fgesture_5fi_5f2_5fmacro_12',['control_gesture_I_2_macro',['../group___gesture__specific__macro.html#gacb6da331c3b84c543b31b4ff10ff6889',1,'CONFIG.h']]],
+  ['control_5fgesture_5fi_5f2_5fstring_13',['control_gesture_I_2_string',['../group___gesture__specific__macro.html#ga35c4dc78b8c8476950cabba1d95a2b50',1,'CONFIG.h']]],
+  ['control_5fgesture_5fi_5f3_5fcode_14',['control_gesture_I_3_code',['../gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481a1fa179d8a8d1c978f20ce8a4a216e923',1,'gesture_database.h']]],
+  ['control_5fgesture_5fi_5f3_5fmacro_15',['control_gesture_I_3_macro',['../group___gesture__specific__macro.html#gaa83489db5e0e4bd0d2eccece844e0e0f',1,'CONFIG.h']]],
+  ['control_5fgesture_5fi_5f3_5fstring_16',['control_gesture_I_3_string',['../group___gesture__specific__macro.html#gafad5ad3d7c87a24250817b42905ab6ba',1,'CONFIG.h']]],
+  ['control_5fgesture_5fi_5fcnt_17',['control_gesture_I_cnt',['../group___gesture__specific__macro.html#gab9cc3fa3e761e8ff941e686cfb6387ce',1,'CONFIG.h']]],
+  ['control_5fgesture_5fi_5flist_18',['control_gesture_I_list',['../group___gesture.html#ga653951e17e8209ebdf6c439a6da664da',1,'gesture_database.cpp']]],
+  ['control_5fhandler_5fi_5f1_19',['control_handler_I_1',['../group___gesture__specific__macro.html#ga4a706a11c365c6845b61ea50167a48fb',1,'CONFIG.h']]],
+  ['control_5fhandler_5fi_5f2_20',['control_handler_I_2',['../group___gesture__specific__macro.html#ga74f606c02ded0582aa225764fa2d5944',1,'CONFIG.h']]],
+  ['control_5fhandler_5fi_5f3_21',['control_handler_I_3',['../group___gesture__specific__macro.html#gaac2b09a9680df497c90c91c6b5f3cd6a',1,'CONFIG.h']]],
+  ['control_5fhandler_5fi_5flist_22',['control_handler_I_list',['../group___gesture.html#gac38bf8ebbaea73147fbb6ead93430069',1,'gesture_database.cpp']]],
+  ['cost_20effective_20and_20memory_20constrain_23',['Wearability, low-power, cost effective and memory constrain',['../index.html#Challenge_2',1,'']]]
+];

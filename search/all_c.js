@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['macro_0',['Macro',['../group___bit__fields__description.html',1,'bit-fields description Macro'],['../group___data__type.html',1,'Data-type Macro'],['../group__space__macro.html',1,'Gesture-space Macro'],['../group___i___o__pins.html',1,'I/O Pin Number Macro']]],
+  ['macro_1',['macro',['../group___d_f__mini__player__specific__macro.html',1,'DF-mini player macro'],['../group___l_c_d__display__specific__macro.html',1,'display macro'],['../group___gesture__specific__macro.html',1,'Gesture-macro'],['../group___pin___change___interrupt__specific__macro.html',1,'Pin-change interrupt macro'],['../group___timer__specific__macro.html',1,'Timer-specific macro']]],
+  ['macros_2',['memory_storage_specific_macro power and storage macros',['../group___low__power__mode__and__flash.html',1,'']]],
+  ['main_2ecpp_3',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['mainpage_2edox_4',['mainpage.dox',['../mainpage_8dox.html',1,'']]],
+  ['master_5fgesture_5f1_5fcode_5',['master_gesture_1_code',['../gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481af018b25bb1be4c7c48f7fc68a184e906',1,'gesture_database.h']]],
+  ['master_5fgesture_5f1_5fmacro_6',['master_gesture_1_macro',['../group___gesture__specific__macro.html#gac1f72e147fa9e03937ab392ecbc429f5',1,'CONFIG.h']]],
+  ['master_5fgesture_5f1_5fstring_7',['master_gesture_1_string',['../group___gesture__specific__macro.html#gab95b0e28efecdeb223c3ef2e4d858002',1,'CONFIG.h']]],
+  ['master_5fgesture_5f2_5fcode_8',['master_gesture_2_code',['../gesture__database_8h.html#a1ba9fc03afb4adadaa98ae1c9ea03481aebd1fe2154de48807b1006dd53199f74',1,'gesture_database.h']]],
+  ['master_5fgesture_5f2_5fmacro_9',['master_gesture_2_macro',['../group___gesture__specific__macro.html#ga96d2cf30b3f5adaed10139cb7779a752',1,'CONFIG.h']]],
+  ['master_5fgesture_5f2_5fstring_10',['master_gesture_2_string',['../group___gesture__specific__macro.html#ga0d58b209549af0c3d76ca564d0f2b24d',1,'CONFIG.h']]],
+  ['master_5fgesture_5fcnt_11',['master_gesture_cnt',['../group___gesture__specific__macro.html#ga5daf5146aefdec4e773c71a363f6393b',1,'CONFIG.h']]],
+  ['master_5fgesture_5flist_12',['master_gesture_list',['../group___gesture.html#gae3279ac3393e6704276485b5bef7e1dc',1,'gesture_database.cpp']]],
+  ['master_5fhandler_5f1_13',['master_handler_1',['../group___gesture__specific__macro.html#gaaaed258902407a69df782f6d1001c4b9',1,'CONFIG.h']]],
+  ['master_5fhandler_5f2_14',['master_handler_2',['../group___gesture__specific__macro.html#gaf94ca9ef674b62da6bb13d7845052e60',1,'CONFIG.h']]],
+  ['master_5fhandler_5flist_15',['master_handler_list',['../group___gesture.html#ga852fd95f8b0f826db563bf2d069eef92',1,'gesture_database.cpp']]],
+  ['max_5fgesture_5fcnt_16',['max_gesture_cnt',['../group___bit__fields__description.html#ga0786072bbbc92db7bae3863a06fe663e',1,'CONFIG.h']]],
+  ['max_5fsensor_5fcnt_5fdata_5ftype_5fmacro_17',['max_sensor_cnt_data_type_macro',['../group___data__type.html#ga5305dff57101337e163bae5f8e8a87b7',1,'CONFIG.h']]],
+  ['max_5fspace_5fcnt_18',['max_space_cnt',['../group___bit__fields__description.html#ga249656a37190a36fb6de7eb21b1e5d4c',1,'CONFIG.h']]],
+  ['memory_20constrain_19',['Wearability, low-power, cost effective and memory constrain',['../index.html#Challenge_2',1,'']]],
+  ['memory_5fstorage_5fspecific_5fmacro_20power_20and_20storage_20macros_20',['memory_storage_specific_macro power and storage macros',['../group___low__power__mode__and__flash.html',1,'']]],
+  ['meta_5finfo_21',['meta_info',['../structgesture__database.html#abe00eb10681ea700cba8c4ce67ebec6b',1,'gesture_database']]],
+  ['mini_20player_20macro_22',['DF-mini player macro',['../group___d_f__mini__player__specific__macro.html',1,'']]],
+  ['mydfplayer_23',['myDFPlayer',['../_gesture_translator_8h.html#af3d87283b673ca2c5039bae393306a9e',1,'GestureTranslator.h']]]
+];
