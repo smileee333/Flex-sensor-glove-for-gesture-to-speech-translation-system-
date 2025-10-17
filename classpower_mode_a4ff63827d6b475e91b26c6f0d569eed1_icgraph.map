@@ -1,0 +1,7 @@
+<map id="powerMode::startPowerMode" name="powerMode::startPowerMode">
+<area shape="rect" id="Node000001" title="To start the current power mode in action." alt="" coords="245,35,436,60"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Continuous loop execution." alt="" coords="78,5,124,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,37,124,24,125,18,229,31"/>
+<area shape="rect" id="Node000003" href="$classgesture__translator.html#a09ee1d19c0dbdd978c6e1ea8a1609812" title="Method to provide necessary halt in execution of control flow from playing the audio file of next wor..." alt="" coords="5,55,197,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,63,198,67,197,62,229,58"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="powerMode::setPowerMode" name="powerMode::setPowerMode">
+<area shape="rect" id="Node000001" title="To configure the CPU as per input power mode and accordingly set the current power mode." alt="" coords="389,104,572,130"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a52965f5950da3086356849bcdd467620" title=" " alt="" coords="271,5,315,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="440,98,340,45,314,31,317,27,342,40,443,94"/>
+<area shape="rect" id="Node000003" href="$_sampler_8cpp.html#a7ff75570a59fca0aede9ab54c93bef1f" title="ISR of Timer : It is used to sample the sensor data at regular intervals and check for gesture recogn..." alt="" coords="271,55,315,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="414,102,315,76,316,71,415,97"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Continuous loop execution." alt="" coords="270,104,316,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="373,120,316,120,316,114,373,114"/>
+<area shape="rect" id="Node000005" href="$classgesture__translator.html#a09ee1d19c0dbdd978c6e1ea8a1609812" title="Method to provide necessary halt in execution of control flow from playing the audio file of next wor..." alt="" coords="5,172,197,213"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="398,136,198,176,196,171,397,131"/>
+<area shape="rect" id="Node000006" href="$_gesture_translator_8cpp.html#a467c4c2e8e4cf59b8ba942b942c605a2" title="ISR meant for disabling the sleep mode and also de&#45;attaching the interrupt pin until waiting is requi..." alt="" coords="245,205,341,231"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="443,140,320,207,317,203,440,135"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="229,212,197,208,198,203,230,207"/>
+</map>

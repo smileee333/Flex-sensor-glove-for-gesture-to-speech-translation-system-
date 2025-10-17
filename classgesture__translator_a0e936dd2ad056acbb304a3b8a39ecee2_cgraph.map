@@ -1,0 +1,5 @@
+<map id="gesture_translator::translateGesture" name="gesture_translator::translateGesture">
+<area shape="rect" id="Node000001" title="Method to send command to DF mini player module to play audio as per input gesture space id and gestu..." alt="" coords="5,5,131,46"/>
+<area shape="rect" id="Node000002" href="$class_d_f_robot_d_f_player_mini.html#aa7fe526e2004883587462f825a6f334d" title=" " alt="" coords="179,5,332,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,23,164,23,164,28,131,28"/>
+</map>

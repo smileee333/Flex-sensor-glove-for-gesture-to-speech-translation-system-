@@ -1,0 +1,24 @@
+<map id="gesture_translator::gesture_translator" name="gesture_translator::gesture_translator">
+<area shape="rect" id="Node000001" title="Constructor of gesture_translator class: To initialize the status variable representing availability ..." alt="" coords="5,104,139,145"/>
+<area shape="rect" id="Node000002" href="$class_d_f_robot_d_f_player_mini.html#a43bfafa431e2f997ffc78f77fa4f1433" title=" " alt="" coords="192,136,346,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,133,177,139,176,144,139,138"/>
+<area shape="rect" id="Node000009" href="$class_d_f_robot_d_f_player_mini.html#a7a50fc4d8cbfe5a5f8270238500bd2dc" title=" " alt="" coords="187,71,351,111"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="139,110,171,105,172,110,140,116"/>
+<area shape="rect" id="Node000003" href="$class_d_f_robot_d_f_player_mini.html#a0db35c38a979bcd92c72fd506a49319d" title=" " alt="" coords="399,71,552,111"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="335,133,394,114,395,119,336,138"/>
+<area shape="rect" id="Node000004" href="$class_d_f_robot_d_f_player_mini.html#a3a68b31c78af0afa286522081fe281ad" title=" " alt="" coords="399,201,552,242"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="336,175,395,194,394,199,335,180"/>
+<area shape="rect" id="Node000005" href="$class_d_f_robot_d_f_player_mini.html#a29b207b6c1014c8f6db56d54d46a45d2" title=" " alt="" coords="399,136,552,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="346,154,383,154,383,159,346,159"/>
+<area shape="rect" id="Node000006" href="$class_d_f_robot_d_f_player_mini.html#afe1ebc1b5858d297ad1dc6f097910056" title=" " alt="" coords="600,165,754,206"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="553,165,585,170,585,175,552,170"/>
+<area shape="rect" id="Node000007" href="$class_d_f_robot_d_f_player_mini.html#a7f24eb42b1a83f92b47a8cb611aca5b1" title=" " alt="" coords="802,137,955,178"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="553,152,600,151,754,151,786,152,786,157,754,156,600,156,553,157"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="754,172,786,168,787,173,754,178"/>
+<area shape="rect" id="Node000008" href="$class_d_f_robot_d_f_player_mini.html#a58872c325229c406056887fb51d8f13f" title=" " alt="" coords="1003,137,1156,178"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="955,155,988,155,988,160,955,160"/>
+<area shape="poly" id="edge11_Node000009_Node000003" title=" " alt="" coords="351,88,384,88,384,94,351,94"/>
+<area shape="poly" id="edge12_Node000009_Node000005" title=" " alt="" coords="336,109,395,128,394,133,335,114"/>
+<area shape="rect" id="Node000010" href="$class_d_f_robot_d_f_player_mini.html#a6f4c1930832f55f934a67666d812a8e9" title=" " alt="" coords="399,5,552,46"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="335,68,394,49,395,54,336,73"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="gesture_translator::waitUntilTranslatorAvailable" name="gesture_translator::waitUntilTranslatorAvailable">
+<area shape="rect" id="Node000001" title="Method to provide necessary halt in execution of control flow from playing the audio file of next wor..." alt="" coords="5,5,197,46"/>
+<area shape="rect" id="Node000002" href="$_gesture_translator_8cpp.html#a467c4c2e8e4cf59b8ba942b942c605a2" title="ISR meant for disabling the sleep mode and also de&#45;attaching the interrupt pin until waiting is requi..." alt="" coords="245,13,341,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,23,229,23,229,28,197,28"/>
+</map>
